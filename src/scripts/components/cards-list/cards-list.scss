@@ -1,0 +1,12 @@
+@import "@styles/main";
+
+.h5p-content-calendar-cards-list {
+  background-size: cover;
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, var(--card-width, 14rem));
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+}

@@ -1,0 +1,113 @@
+@import "@styles/main";
+
+$card-width: var(--card-width, 14rem);
+$card-padding: 0.5rem;
+$content-border-radius: 0.5rem;
+$content-gap: 0.5rem;
+
+.h5p-content-calendar-card {
+  background-color: #fff;
+  border: 0.15rem solid $color-shadow-dark;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  list-style-type: none;
+  width: $card-width;
+  padding: $card-padding;
+
+  &:not(.locked) {
+    cursor: pointer;
+
+    &:hover {
+      border-color: $color-primary;
+    }
+  }
+
+  .h5p-content-calendar-card-content {
+    align-items: inherit;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: $content-gap;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    user-select: none;
+    width: 100%;
+
+    .h5p-content-calendar-card-label {
+      background-color: $color-primary;
+      border-radius: $content-border-radius $content-border-radius 0 0;
+      color: $color-background;
+      flex-grow: 0;
+      font-weight: bold;
+      line-height: 1.5rem;
+      overflow: hidden;
+      padding: 0.25rem 0.5rem;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .h5p-content-calendar-card-image {
+      max-width: 100%;
+
+      &.has-label {
+        margin-top: -$content-gap;
+      }
+
+      &:not(.has-label) {
+        border-radius: $content-border-radius $content-border-radius 0 0;
+      }
+
+      &.fixed-ratio {
+        height: calc(($card-width - 2 * $card-padding) / var(--card-image-ratio-width, 16) * var(--card-image-ratio-height, 9));
+        object-fit: cover;
+      }
+    }
+
+    .h5p-content-calendar-card-introduction {
+      display: -webkit-box;
+      flex-grow: 1;
+      overflow: hidden;
+      padding: 0;
+      -webkit-line-clamp: var(--card-introduction-clamp);
+      -webkit-box-orient: vertical;
+
+      &:not(.empty) {
+        margin: 0.5rem 0;
+      }
+
+      &.empty {
+        margin: 0;
+      }
+    }
+
+    .h5p-content-calendar-card-status {
+      border-top: 1px solid $color-shadow-dark;
+      color: $color-primary;
+      font-weight: bold;
+      min-height: 1.5rem;
+      overflow: hidden;
+      padding: 0.5rem 0 0 0;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &.locked {
+    background-color: #eeeeee;
+    filter: brightness(90%);
+
+    .h5p-content-calendar-card-status {
+      color: #333;
+    }
+  }
+
+  &.display-none {
+    display: none;
+  }
+}

@@ -1,0 +1,487 @@
+[
+  {
+    "name": "showTitleScreen",
+    "label": "Show title screen",
+    "description": "If checked, a title screen will show up when starting.",
+    "type": "boolean",
+    "default": false,
+    "optional": true
+  },
+  {
+    "name": "titleScreen",
+    "label": "Title screen",
+    "type": "group",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "titleScreenIntroduction",
+        "label": "Introduction",
+        "type": "text",
+        "widget": "html",
+        "placeholder": "Welcome to ...",
+        "optional": true,
+        "enterMode": "div",
+        "tags": [
+          "sub",
+          "sup",
+          "strong",
+          "em",
+          "u",
+          "del",
+          "pre",
+          "code"
+        ],
+        "font": {
+          "size": true,
+          "color": true,
+          "background": true
+        },
+        "default": "<p style=\"text-align: center;\"></p>"
+      },
+      {
+        "name": "titleScreenMedium",
+        "label": "Title screen medium",
+        "type": "library",
+        "optional": true,
+        "options": [
+          "H5P.Image 1.1",
+          "H5P.Video 1.6"
+        ]
+      }
+    ],
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "showTitleScreen",
+          "equals": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "introductionTexts",
+    "type": "group",
+    "label": "Introduction texts",
+    "fields": [
+      {
+        "name": "introFilter",
+        "type": "text",
+        "widget": "html",
+        "label": "Introduction for filtering and selection",
+        "importance": "medium",
+        "optional": true,
+        "description": "Explain what the users are expected to do when filtering and selecting content.",
+        "enterMode": "p",
+        "tags": [
+          "sub",
+          "sup",
+          "strong",
+          "em",
+          "p",
+          "code",
+          "u",
+          "del",
+          "a",
+          "ul",
+          "ol",
+          "pre",
+          "hr",
+          "table"
+        ],
+        "font": {
+          "size": true,
+          "color": true,
+          "background": true
+        }
+      },
+      {
+        "name": "introReorder",
+        "type": "text",
+        "widget": "html",
+        "label": "Introduction for reordering",
+        "importance": "medium",
+        "optional": true,
+        "description": "Explain what the users are expected to do reordering content.",
+        "enterMode": "p",
+        "tags": [
+          "sub",
+          "sup",
+          "strong",
+          "em",
+          "p",
+          "code",
+          "u",
+          "del",
+          "a",
+          "ul",
+          "ol",
+          "pre",
+          "hr",
+          "table"
+        ],
+        "font": {
+          "size": true,
+          "color": true,
+          "background": true
+        }
+      },
+      {
+        "name": "introView",
+        "type": "text",
+        "widget": "html",
+        "label": "Introduction for viewing",
+        "importance": "medium",
+        "optional": true,
+        "description": "Explain what the users are expected to do when viewing content.",
+        "enterMode": "p",
+        "tags": [
+          "sub",
+          "sup",
+          "strong",
+          "em",
+          "p",
+          "code",
+          "u",
+          "del",
+          "a",
+          "ul",
+          "ol",
+          "pre",
+          "hr",
+          "table"
+        ],
+        "font": {
+          "size": true,
+          "color": true,
+          "background": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "contents",
+    "type": "list",
+    "label": "Contents",
+    "importance": "high",
+    "entity": "content",
+    "min": 1,
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
+    "field": {
+      "name": "content",
+      "type": "group",
+      "importance": "low",
+      "label": "Content",
+      "fields": [
+        {
+          "name": "label",
+          "type": "text",
+          "label": "Label",
+          "description": "Label for the content. The label will be set to the metadata title if no label, image or teaser is set.",
+          "optional": true
+        },
+        {
+          "name": "image",
+          "type": "image",
+          "label": "Image",
+          "description": "Optional illustrative image.",
+          "optional": true
+        },
+        {
+          "name": "introduction",
+          "type": "text",
+          "label": "Teaser",
+          "description": "Optional teaser for the content.",
+          "optional": true
+        },
+        {
+          "name": "restrictions",
+          "type": "group",
+          "label": "Access restrictions",
+          "description": "Define how access to the content should be limited.",
+          "importance": "low",
+          "optional": true,
+          "fields": [
+            {
+              "name": "starttime",
+              "type": "text",
+              "label": "Start date",
+              "description": "Optionally, set date and time when the content becomes available.",
+              "optional": true,
+              "widget": "datetime"
+            },
+            {
+              "name": "endtime",
+              "type": "text",
+              "label": "End date",
+              "description": "Optionally, set date and time when the content becomes unavailable",
+              "optional": true,
+              "widget": "datetime"
+            }
+          ]
+        },
+        {
+          "name": "contentType",
+          "type": "library",
+          "label": "Content",
+          "description": "Choose the type of content you would like to add.",
+          "importance": "high",
+          "options": [
+            "H5P.Accordion 1.0",
+            "H5P.Agamotto 1.6",
+            "H5P.Audio 1.5",
+            "H5P.AudioRecorder 1.0",
+            "H5P.CombinationLock 1.0",
+            "H5P.CoursePresentation 1.25",
+            "H5P.Dialogcards 1.9",
+            "H5P.DragQuestion 1.14",
+            "H5P.DragText 1.10",
+            "H5P.Essay 1.5",
+            "H5P.Blanks 1.14",
+            "H5P.ImageHotspotQuestion 1.8",
+            "H5P.Image 1.1",
+            "H5P.ImageHotspots 1.10",
+            "H5P.ImageSlider 1.1",
+            "H5P.InteractiveVideo 1.26",
+            "H5P.MarkTheWords 1.11",
+            "H5P.MemoryGame 1.3",
+            "H5P.MultiChoice 1.16",
+            "H5P.QuestionSet 1.20",
+            "H5P.SingleChoiceSet 1.11",
+            "H5P.SortParagraphs 0.11",
+            "H5P.Summary 1.10",
+            "H5P.Tabs 1.1",
+            "H5P.AdvancedText 1.1",
+            "H5P.Transcript 1.1",
+            "H5P.TrueFalse 1.8",
+            "H5P.Video 1.6"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "visuals",
+    "type": "group",
+    "importance": "low",
+    "label": "Visual settings",
+    "fields": [
+      {
+        "name": "backgroundImage",
+        "type": "image",
+        "label": "Background image",
+        "description": "Select an image to use as the background of the content."
+      },
+      {
+        "name": "cardWidth",
+        "type": "text",
+        "label": "Card width",
+        "description": "Set the default card width as a CSS value (e.g. 100px or 14rem or 15em). If you leave out the unit, px will be assumed.",
+        "regexp": {
+          "pattern": "^\\d+(?:\\.\\d+)?(?: )?(px|rem|em)?$",
+          "modifiers": ""
+        },
+        "default": "14rem"
+      },
+      {
+        "name": "imageSizing",
+        "type": "select",
+        "label": "Image sizing",
+        "description": "Choose how content images should be sized.",
+        "options": [
+          {
+            "label": "Use image size ratio",
+            "value": "original"
+          },
+          {
+            "label": "Use custom ratio",
+            "value": "custom"
+          }
+        ],
+        "default": "custom"
+      },
+      {
+        "name": "customRatioWidth",
+        "type": "number",
+        "label": "Custom ratio width",
+        "description": "Set the horizontal ratio component for content images.",
+        "min": 1,
+        "default": 16,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "imageSizing",
+              "equals": "custom"
+            }
+          ]
+        }
+      },
+      {
+        "name": "customRatioHeight",
+        "type": "number",
+        "label": "Custom ratio height",
+        "description": "Set the vertical ratio component for content images.",
+        "min": 1,
+        "default": 9,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "imageSizing",
+              "equals": "custom"
+            }
+          ]
+        }
+      },
+      {
+        "name": "introClamp",
+        "type": "number",
+        "label": "Maximum teaser lines",
+        "description": "Set the maximum number of lines to display for the content teaser.",
+        "min": 1,
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "label": "User interface",
+    "common": true,
+    "fields": [
+      {
+        "name": "start",
+        "type": "text",
+        "label": "Start",
+        "description": "Label of start button.",
+        "default": "Start"
+      },
+      {
+        "name": "statusUnstarted",
+        "type": "text",
+        "label": "Status: unstarted",
+        "description": "Status label for unstarted content.",
+        "default": "unstarted"
+      },
+      {
+        "name": "statusViewed",
+        "type": "text",
+        "label": "Status: viewed",
+        "description": "Status label for viewed content.",
+        "default": "viewed"
+      },
+      {
+        "name": "statusCompleted",
+        "type": "text",
+        "label": "Status: completed",
+        "description": "Status label for completed content.",
+        "default": "completed"
+      },
+      {
+        "name": "statusCleared",
+        "type": "text",
+        "label": "Status: cleared",
+        "description": "Status label for cleared content.",
+        "default": "cleared"
+      },
+      {
+        "name": "untitledContent",
+        "type": "text",
+        "label": "Untitled Content",
+        "description": "Fallback label.",
+        "default": "Untitled Content"
+      },
+      {
+        "name": "confirmResetHeader",
+        "type": "text",
+        "label": "Reset confirmation dialog: header",
+        "description": "Header for dialog to confirm resetting all contents.",
+        "default": "Reset all contents?"
+      },
+      {
+        "name": "confirmResetDialog",
+        "type": "text",
+        "label": "Reset confirmation dialog: text",
+        "description": "Text for dialog to confirm resetting all contents.",
+        "default": "All your contents and their status will be reset, but your selection will remain as is. Do you want to proceed?"
+      },
+      {
+        "name": "confirmResetAllHeader",
+        "type": "text",
+        "label": "Reset confirmation dialog: header",
+        "description": "Header for dialog to confirm resetting all contents and selections.",
+        "default": "Reset all contents and selections?"
+      },
+      {
+        "name": "confirmResetAllDialog",
+        "type": "text",
+        "label": "Reset confirmation dialog: text",
+        "description": "Text for dialog to confirm resetting all contents and selections.",
+        "default": "All your contents and their status and your selections will be reset. Do you want to proceed?"
+      },
+      {
+        "name": "yes",
+        "type": "text",
+        "label": "Yes",
+        "default": "Yes"
+      },
+      {
+        "name": "no",
+        "type": "text",
+        "label": "No",
+        "default": "No"
+      },
+      {
+        "name": "noContents",
+        "type": "text",
+        "label": "No contents",
+        "default": "No valid contents were set."
+      }
+    ]
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "label": "Accessibility texts",
+    "common": true,
+    "fields": [
+      {
+        "name": "exerciseLabel",
+        "type": "text",
+        "label": "Exercise description",
+        "description": "@label is a placeholder that will be replaced with the respective value.",
+        "default": "Exercise: @label"
+      },
+      {
+        "name": "toolbar",
+        "type": "text",
+        "label": "Toolbar description",
+        "default": "Toolbar. Use the key combination Alt plus T to focus the toolbar later on."
+      },
+      {
+        "name": "buttonReset",
+        "type": "text",
+        "label": "Button: Reset",
+        "default": "Reset exercises"
+      },
+      {
+        "name": "cardListView",
+        "type": "text",
+        "label": "Description for content list",
+        "default": "Do selected exercises"
+      },
+      {
+        "name": "close",
+        "type": "text",
+        "label": "Close",
+        "default": "Close"
+      }
+    ]
+  }
+]

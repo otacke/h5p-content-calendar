@@ -1,0 +1,14 @@
+@import "@styles/main";
+
+.h5p-content-calendar-message-box.message-box-hint {
+  background-color: $color-hint-message-background;
+  border: 1px solid $color-hint-message-border;
+  box-sizing: border-box;
+  color: $color-hint-message-text;
+  font-size: .8em;
+  padding: .8em;
+
+  .h5p-content-calendar-message-box-message {
+    text-align: center;
+  }
+}

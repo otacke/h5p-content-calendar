@@ -1,0 +1,59 @@
+@import '@styles/main';
+
+$button-pseudo-size: 1.15rem;
+$button-pseudo-offset: 0.575rem;
+
+.h5p-content-calendar-toolbar-tool-bar {
+  align-items: center;
+  background-color: $color-background;
+  box-shadow: 10px 10px 30px $color-shadow-light;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 0.5rem;
+
+  .toolbar-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: flex-end;
+
+    .toolbar-button {
+      color: $color-joubelui-button-hover;
+      position: relative;
+
+      &.toolbar-button-active {
+        color: $color-background;
+      }
+
+      &.toolbar-button-reset {
+        &.toolbar-button-disabled {
+          background-color: $color-background;
+          color: $color-disabled;
+        }
+
+        &::before {
+          content: "\f021";
+          font-family: "H5PFontAwesome4", sans-serif;
+          font-size: $button-pseudo-size;
+          height: $button-pseudo-size;
+          left: 50%;
+          margin-left: -$button-pseudo-offset;
+          margin-top: -$button-pseudo-offset;
+          position: absolute;
+          top: 50%;
+          width: $button-pseudo-size;
+        }
+      }
+    }
+  }
+
+  &.display-none {
+    display: none;
+  }
+}
