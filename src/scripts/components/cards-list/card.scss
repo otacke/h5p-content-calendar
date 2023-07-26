@@ -15,18 +15,6 @@ $content-gap: 0.5rem;
   width: $card-width;
   padding: $card-padding;
 
-  &:not(.locked) {
-    cursor: pointer;
-
-    .h5p-content-calendar-card-content {
-      cursor: pointer;
-    }
-
-    &:hover {
-      border-color: $color-primary;
-    }
-  }
-
   .h5p-content-calendar-card-content {
     align-items: inherit;
     background: none;
@@ -99,6 +87,18 @@ $content-gap: 0.5rem;
       text-align: center;
       text-overflow: ellipsis;
       white-space: nowrap;
+    }
+  }
+
+  &:not(.locked) {
+    cursor: pointer;
+
+    .h5p-content-calendar-card-content {
+      cursor: pointer;
+    }
+
+    &:hover {
+      border-color: $color-primary;
     }
   }
 
