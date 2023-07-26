@@ -13,8 +13,12 @@ export default class ContentInstance {
     this.instance = undefined;
     this.isAttached = false;
 
+    this.dom = document.createElement('div');
+    this.dom.classList.add('h5p-content-calendar-exercise-instance-wrapper');
+
     this.instanceDOM = document.createElement('div');
     this.instanceDOM.classList.add('h5p-content-calendar-content-instance');
+    this.dom.append(this.instanceDOM);
 
     this.initialize();
 
@@ -26,7 +30,7 @@ export default class ContentInstance {
    * @returns {HTMLElement} Instance DOM.
    */
   getDOM() {
-    return this.instanceDOM;
+    return this.dom;
   }
 
   /**
@@ -176,7 +180,7 @@ export default class ContentInstance {
         this.callbacks.onContinued();
       });
 
-      this.instanceDOM.append(this.continueButton);
+      this.dom.append(this.continueButton);
     }
 
     this.isAttached = true;
