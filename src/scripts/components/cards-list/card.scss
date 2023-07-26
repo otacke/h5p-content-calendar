@@ -18,6 +18,10 @@ $content-gap: 0.5rem;
   &:not(.locked) {
     cursor: pointer;
 
+    .h5p-content-calendar-card-content {
+      cursor: pointer;
+    }
+
     &:hover {
       border-color: $color-primary;
     }
