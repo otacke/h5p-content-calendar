@@ -61,7 +61,6 @@ export default class ContentCalendar extends H5P.EventDispatcher {
     this.globals.set('contentId', this.contentId);
     this.globals.set('mainInstance', this);
     this.globals.set('states', ContentCalendar.STATES);
-    this.globals.set('modes', ContentCalendar.MODES);
     this.globals.set('resize', () => {
       this.trigger('resize');
     });
@@ -198,11 +197,4 @@ ContentCalendar.STATES = {
   viewed: 1,
   completed: 2,
   cleared: 3
-};
-
-/** @constant {object} MODES Modes lookup */
-ContentCalendar.MODES = {
-  filter: 0,
-  reorder: 1,
-  view: 2
 };
