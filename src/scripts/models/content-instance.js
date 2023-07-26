@@ -6,7 +6,8 @@ export default class ContentInstance {
     }, params);
 
     this.callbacks = Util.extend({
-      onStateChanged: () => {}
+      onStateChanged: () => {},
+      onContinued: () => {}
     }, callbacks);
 
     this.instance = undefined;
@@ -146,6 +147,38 @@ export default class ContentInstance {
       }
     }
 
+    // If using H5P.Question, use its button functions.
+    if (
+      this.instance.registerDomElements &&
+      this.instance.addButton && this.instance.hasButton
+    ) {
+      this.extendsH5PQuestion = true;
+
+      this.instance.addButton(
+        'content-calendar-continue',
+        this.params.dictionary.get('l10n.continue'),
+        () => {
+          this.callbacks.onContinued();
+        },
+        false
+      );
+    }
+    else {
+      this.continueButton = document.createElement('button');
+      this.continueButton.classList.add(
+        'h5p-joubelui-button',
+        'h5p-content-calendar-exercise-instance-continue-button',
+        'display-none'
+      );
+      this.continueButton.innerText =
+        this.params.dictionary.get('l10n.continue');
+      this.continueButton.addEventListener('click', () => {
+        this.callbacks.onContinued();
+      });
+
+      this.instanceDOM.append(this.continueButton);
+    }
+
     this.isAttached = true;
   }
 
@@ -186,6 +219,13 @@ export default class ContentInstance {
     }
     else {
       this.setState(this.params.globals.get('states')['cleared']);
+    }
+
+    if (this.extendsH5PQuestion) {
+      this.instance.showButton('content-calendar-continue');
+    }
+    else {
+      this.continueButton.classList.remove('display-none');
     }
   }
 

@@ -13,7 +13,8 @@ export default class Contents {
 
     this.callbacks = Util.extend({
       onStateChanged: () => {},
-      onCardStateChanged: () => {}
+      onCardStateChanged: () => {},
+      onContinued: () => {}
     }, callbacks);
 
     if (Object.keys(this.params.previousState).length) {
@@ -72,6 +73,7 @@ export default class Contents {
     const contentInstance = new ContentInstance(
       {
         globals: this.params.globals,
+        dictionary: this.params.dictionary,
         contentParams: params.contentType,
         previousState: params.previousState
       },
@@ -81,6 +83,9 @@ export default class Contents {
             id: params.contentType.subContentId,
             state: state
           });
+        },
+        onContinued: () => {
+          this.callbacks.onContinued();
         }
       }
     );

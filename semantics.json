@@ -342,6 +342,12 @@
         "type": "text",
         "label": "No contents",
         "default": "No valid contents were set."
+      },
+      {
+        "name": "continue",
+        "type": "text",
+        "label": "Continue",
+        "default": "Continue"
       }
     ]
   },

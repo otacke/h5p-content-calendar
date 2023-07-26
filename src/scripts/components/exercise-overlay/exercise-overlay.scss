@@ -93,6 +93,26 @@
           box-sizing: border-box;
           margin-top: 0.75rem;
 
+          .h5p-content-calendar-exercise-instance-continue-button {
+            float: right;
+
+            &::before {
+              content: "\f04b";
+            }
+
+            &.display-none {
+              display: none;
+            }
+          }
+
+          .h5p-question-content-calendar-continue {
+            float: right;
+
+            &::before {
+              content: "\f04b";
+            }
+          }
+
           &.h5p-video {
             overflow: inherit;
             height: 100%;

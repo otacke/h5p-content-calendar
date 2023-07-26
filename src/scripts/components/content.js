@@ -44,6 +44,7 @@ export default class Content {
     this.pool = new Contents(
       {
         globals: this.params.globals,
+        dictionary: this.params.dictionary,
         contents: this.params.contents,
         ...(this.params.previousState.contents && {
           previousState: this.params.previousState.contents
@@ -55,6 +56,9 @@ export default class Content {
         },
         onCardStateChanged: (id, key, value) => {
           this.poolList.updateCardState(id, key, value);
+        },
+        onContinued: () => {
+          this.handleExerciseClosed();
         }
       }
     );
