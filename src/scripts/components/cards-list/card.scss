@@ -136,6 +136,14 @@ $content-gap: 0.5rem;
   }
 
   &.no-content-state {
+    .h5p-content-calendar-card-content {
+      .h5p-content-calendar-card-image {
+        &.has-label {
+          margin-top: 0;
+        }
+      }
+    }
+
     &.no-introduction {
       .h5p-content-calendar-card-content {
         .h5p-content-calendar-card-image {
