@@ -13,7 +13,6 @@ $content-gap: 0.5rem;
   display: flex;
   list-style-type: none;
   width: $card-width;
-  padding: $card-padding;
 
   .h5p-content-calendar-card-content {
     align-items: inherit;
@@ -22,7 +21,6 @@ $content-gap: 0.5rem;
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    gap: $content-gap;
     margin: 0;
     padding: 0;
     text-align: left;
@@ -73,7 +71,7 @@ $content-gap: 0.5rem;
       }
 
       &.empty {
-        margin: 0;
+        display: none;
       }
     }
 
@@ -87,6 +85,48 @@ $content-gap: 0.5rem;
       text-align: center;
       text-overflow: ellipsis;
       white-space: nowrap;
+
+      &.display-none {
+        display: none;
+      }
+    }
+  }
+
+  &.has-padding {
+    padding: $card-padding;
+  }
+
+  &:not(.has-padding) {
+    padding: 0;
+
+    .h5p-content-calendar-card-introduction {
+      padding: 0 $card-padding;
+    }
+  }
+
+  &:not(.no-content-state) {
+    .h5p-content-calendar-card-content {
+      gap: $content-gap;
+    }
+  }
+
+  &.no-content-state {
+    &.no-introduction {
+      .h5p-content-calendar-card-content {
+        .h5p-content-calendar-card-image {
+          border-bottom-left-radius: $content-border-radius;
+          border-bottom-right-radius: $content-border-radius;
+        }
+      }
+    }
+
+    &.no-image {
+      .h5p-content-calendar-card-content {
+        .h5p-content-calendar-card-label {
+          border-bottom-left-radius: $content-border-radius;
+          border-bottom-right-radius: $content-border-radius;
+        }
+      }
     }
   }
 

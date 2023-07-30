@@ -12,6 +12,7 @@ export default class MessageBox {
 
     this.message = document.createElement('p');
     this.message.classList.add('h5p-content-calendar-message-box-message');
+    this.hide();
     this.dom.append(this.message);
   }
 

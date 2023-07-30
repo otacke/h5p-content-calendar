@@ -1,6 +1,7 @@
 import ToolbarButton from './toolbar-button';
 import Util from '@services/util';
 import './toolbar.scss';
+import ToolbarHeadline from './toolbar-headline';
 
 /** Class representing the button bar */
 export default class Toolbar {
@@ -17,6 +18,9 @@ export default class Toolbar {
       buttons: [],
       hidden: false
     }, params);
+
+    this.params.hidden = this.params.hidden ||
+      (!this.params.headline && this.params.buttons?.length === 0);
 
     this.callbacks = Util.extend({
     }, callbacks);
@@ -36,6 +40,11 @@ export default class Toolbar {
 
     if (this.params.hidden) {
       this.hide();
+    }
+
+    if (this.params.headline) {
+      const headline = new ToolbarHeadline({ text: this.params.headline });
+      this.dom.append(headline.getDOM());
     }
 
     // Buttons

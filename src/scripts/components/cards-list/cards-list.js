@@ -71,8 +71,8 @@ export default class CardsList {
             label: contentParams.label,
             image: contentParams.image,
             introduction: contentParams.introduction,
-            keywords: contentParams.keywords,
-            visuals: contentParams.visuals
+            visuals: contentParams.visuals,
+            displayContentState: this.params.behaviour.displayContentState
           }
         }
       );

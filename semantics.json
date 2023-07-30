@@ -60,6 +60,13 @@
     }
   },
   {
+    "name": "headline",
+    "type": "text",
+    "label": "Headline",
+    "description": "Optional headline to show above cards.",
+    "optional": true
+  },
+  {
     "name": "contents",
     "type": "list",
     "label": "Contents",
@@ -166,6 +173,27 @@
     }
   },
   {
+    "name": "behaviour",
+    "type": "group",
+    "importance": "low",
+    "label": "Behavioural settings",
+    "description": "These options will let you control how the task behaves.",
+    "fields": [
+      {
+        "name": "displayContentState",
+        "type": "boolean",
+        "label": "Display content state",
+        "description": "If checked, will display the contents state at the bottom of a card."
+      },
+      {
+        "name": "enableRetry",
+        "type": "boolean",
+        "label": "Enable \"Retry\" button",
+        "description": "If checked, allows users to reset all exercises of all cards at once."
+      }
+    ]
+  },
+  {
     "name": "visuals",
     "type": "group",
     "importance": "low",
@@ -176,6 +204,12 @@
         "type": "image",
         "label": "Background image",
         "description": "Select an image to use as the background of the content."
+      },
+      {
+        "name": "hasCardPadding",
+        "type": "boolean",
+        "label": "Add padding to cards",
+        "description": "If checked, will some extra padding to the card."
       },
       {
         "name": "cardWidth",

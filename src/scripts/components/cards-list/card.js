@@ -13,7 +13,6 @@ export default class Card {
    */
   constructor(params = {}, callbacks = {}) {
     this.params = Util.extend({
-      keywords: []
     }, params);
 
     this.callbacks = Util.extend({
@@ -30,6 +29,13 @@ export default class Card {
   buildDOM() {
     this.dom = document.createElement('li');
     this.dom.classList.add('h5p-content-calendar-card');
+    this.dom.classList.toggle('no-label', !this.params.label);
+    this.dom.classList.toggle('no-image', !this.params.image?.path);
+    this.dom.classList.toggle('no-introduction', !this.params.introduction);
+    this.dom.classList.toggle(
+      'no-content-state', !this.params.displayContentState
+    );
+    this.dom.classList.toggle('has-padding', this.params.visuals.hasCardPadding);
 
     this.button = document.createElement('button');
     this.button.classList.add('h5p-content-calendar-card-content');
@@ -78,6 +84,9 @@ export default class Card {
 
     this.status = document.createElement('div');
     this.status.classList.add('h5p-content-calendar-card-status');
+    this.status.classList.toggle(
+      'display-none', !this.params.displayContentState
+    );
     this.button.append(this.status);
   }
 

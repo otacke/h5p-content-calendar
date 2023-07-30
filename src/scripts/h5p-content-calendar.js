@@ -19,6 +19,7 @@ export default class ContentCalendar extends H5P.EventDispatcher {
       introductionTexts: {},
       contents: [],
       visuals: {
+        hasCardPadding: false,
         cardWidth: '14rem',
         imageSizing: 'custom',
         customRatioWidth: 16,
@@ -26,6 +27,8 @@ export default class ContentCalendar extends H5P.EventDispatcher {
         introClamp: 'unset'
       },
       behaviour: {
+        displayContentState: false,
+        enableRetry: false
       },
       l10n: {
         start: 'Start',
@@ -133,7 +136,9 @@ export default class ContentCalendar extends H5P.EventDispatcher {
       {
         dictionary: this.dictionary,
         globals: this.globals,
+        ...(this.params.headline && { headline: this.params.headline }),
         contents: this.params.contents,
+        behaviour: this.params.behaviour,
         introductionTexts: this.params.introductionTexts,
         ...(
           this.params.showTitleScreen &&

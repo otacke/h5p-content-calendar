@@ -94,8 +94,9 @@ export default class Content {
     this.main.classList.add('h5p-content-calendar-content-main');
     this.dom.append(this.main);
 
-    const buttons = [
-      {
+    const buttons = [];
+    if (this.params.behaviour.enableRetry) {
+      buttons.push(      {
         id: 'reset',
         type: 'pulse',
         a11y: {
@@ -104,12 +105,13 @@ export default class Content {
         onClick: () => {
           this.handleResetConfirmation();
         }
-      }
-    ];
+      });
+    }
 
     // Toolbar
     this.toolbar = new Toolbar({
       dictionary: this.params.dictionary,
+      ...(this.params.headline && { headline: this.params.headline }),
       buttons: buttons
     });
     this.main.append(this.toolbar.getDOM());
@@ -122,6 +124,7 @@ export default class Content {
       {
         dictionary: this.params.dictionary,
         globals: this.params.globals,
+        behaviour: this.params.behaviour,
         contents: this.pool.getContents(),
         ...(this.params.backgroundImage &&
           { backgroundImage: this.params.backgroundImage }
