@@ -61,11 +61,13 @@ export default class Contents {
       keywords: ''
     }, params);
 
+    const ariaLabel = params.label ?? (
+      params.contentType.metadata?.title ||
+      this.params.dictionary.get('l10n.untitledContent')
+    );
+
     const label = (!params.label && !params.image && !params.introduction) ?
-      (
-        params.contentType.metadata?.title ||
-        this.params.dictionary.get('l10n.untitledContent')
-      ) :
+      ariaLabel :
       params.label;
 
     const introduction = params.introduction || '';
@@ -116,6 +118,7 @@ export default class Contents {
     // TODO: Could be a class
     const content = {
       ...(label && {label: label}),
+      ariaLabel: ariaLabel,
       ...(params.image && {image: params.image}),
       introduction: introduction,
       contentInstance: contentInstance,

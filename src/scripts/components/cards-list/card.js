@@ -133,7 +133,7 @@ export default class Card {
    */
   updateAriaLabel() {
     const ariaLabelSegments = [
-      `${this.params.dictionary.get('a11y.exerciseLabel').replace(/@label/g, this.params.label)}`,
+      `${this.params.dictionary.get('a11y.exerciseLabel').replace(/@label/g, this.params.ariaLabel)}`,
       this.params.dictionary.get(`l10n.status${this.statusCode}`)
     ];
 

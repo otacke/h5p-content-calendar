@@ -69,6 +69,7 @@ export default class CardsList {
           id: id,
           card: {
             label: contentParams.label,
+            ariaLabel: contentParams.ariaLabel,
             image: contentParams.image,
             introduction: contentParams.introduction,
             visuals: contentParams.visuals,
