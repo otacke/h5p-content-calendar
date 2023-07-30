@@ -1,0 +1,222 @@
+{
+  "semantics": [
+    {
+      "label": "Titelbildschirm anzeigen",
+      "description": "Wenn diese Option aktiviert ist, wird beim Starten ein Titelbildschirm angezeigt."
+    },
+    {
+      "label": "Titelbildschirm",
+      "fields": [
+        {
+          "label": "Einleitung",
+          "placeholder": "Willkommen zu ...",
+          "default": "<p style=\"text-align: center;\"></p>"
+        },
+        {
+          "label": "Medium für den Titelbildschirm"
+        }
+      ]
+    },
+    {
+      "label": "Titelzeile",
+      "description": "Optionale Titelzeile, die oberhalb der Karten angezeigt wird."
+    },
+    {
+      "label": "Inhalte",
+      "entity": "Inhalt",
+      "widgets": [
+        {
+          "label": "Vorgabe"
+        }
+      ],
+      "field": {
+        "label": "Inhalt",
+        "fields": [
+          {
+            "label": "Beschriftung",
+            "description": "Beschriftung für den Inhalt."
+          },
+          {
+            "label": "Bild",
+            "description": "Optionales, illustratives Bild."
+          },
+          {
+            "label": "Teaser",
+            "description": "Optionales Teaser für den Inhalt."
+          },
+          {
+            "label": "Zugriffsbeschränkungen",
+            "description": "Lege fest, wie der Zugang zu den Inhalten beschränkt werden sollte.",
+            "fields": [
+              {
+                "label": "Startdatum",
+                "description": "Lege optional ein Datum und eine Uhrzeit fest, ab wann der Inhalt verfügbar wird."
+              },
+              {
+                "label": "Enddatum",
+                "description": "Lege optional ein Datum und eine Uhrzeit fest, ab wann der Inhalt nicht mehr zugänglich ist."
+              }
+            ]
+          },
+          {
+            "label": "Inhalt",
+            "description": "Wähe den Inhaltstyp, den du hinzufügen möchtest."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Verhaltenseinstellungen",
+      "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält.",
+      "fields": [
+        {
+          "label": "Zeige den Inhaltsstatus",
+          "description": "Wenn angewählt, wird der Status des Inhalts am Ende einer Karte angezeigt."
+        },
+        {
+          "label": "\"Wiederholen\"-Button anzeigen",
+          "description": "Wenn angewählt, wird es Nutzenden ermöglicht, alle Inhalte aller Karten zurückzusetzen."
+        }
+      ]
+    },
+    {
+      "label": "Optische Einstellungen",
+      "fields": [
+        {
+          "label": "Hintergrundbild",
+          "description": "Wähle ein Hintergrundbild für den gesamten Inhalt aus."
+        },
+        {
+          "label": "Füge Anstand in Karten ein",
+          "description": "Wenn gewählt, wird zwischen Kartenrand und Karteninhalt etwas Abstand eingefügt."
+        },
+        {
+          "label": "Kartenbreite",
+          "description": "Setze die Standardbreite für eine Karte als CSS-Wert (zum Beispiel 100px oder 14rem oder 15em). Wenn du keine Einheit angibst, werden Pixel angenommen.",
+          "default": "14rem"
+        },
+        {
+          "label": "Bildskalierung",
+          "description": "Wähle, wie die Bilder für die Karten skaliert werden sollen.",
+          "options": [
+            {
+              "label": "Benutze das Seitenverhältnis des jeweiligen Bildes"
+            },
+            {
+              "label": "Wähle für alle ein vorgegebenes Seitenverhältnis"
+            }
+          ]
+        },
+        {
+          "label": "Breite des Seitenverhältnisses",
+          "description": "Setze die horizontale Komponente für das Seitenverhältnis von Bildern für eine Karte."
+        },
+        {
+          "label": "Höhe des Seitenverhältnisses",
+          "description": "Setze die vertikale Komponente für das Seitenverhältnis von Bildern für eine Karte."
+        },
+        {
+          "label": "Maximale Anzahl von Teaserzeilen",
+          "description": "Setze die maximale Anzahl von Zeilen, die für den Teaser auf der Karte angezeigt werden sollen."
+        }
+      ]
+    },
+    {
+      "label": "Bedienoberfläche",
+      "fields": [
+        {
+          "label": "Start",
+          "description": "Beschriftung des \"Start\"-Buttons.",
+          "default": "Start"
+        },
+        {
+          "label": "Status: nicht gestartet",
+          "description": "Statusbeschriftung für noch nicht gestarteten Inhalt.",
+          "default": "nicht gestartet"
+        },
+        {
+          "label": "Status: angesehen",
+          "description": "Statusbeschriftung für angesehenen Inhalt.",
+          "default": "angesehen"
+        },
+        {
+          "label": "Status: abgeschlossen",
+          "description": "Statusbeschriftung für abgeschlossenen Inhalt.",
+          "default": "abgeschlossen"
+        },
+        {
+          "label": "Status: gemeistert",
+          "description": "Statusbeschriftung für gemeisterten Inhalt.",
+          "default": "gemeistert"
+        },
+        {
+          "label": "Inhalt ohne Titel",
+          "description": "Notfall-Beschriftung.",
+          "default": "Inhalt ohne Titel"
+        },
+        {
+          "label": "Bestätigungsdialog zum Zurücksetzen: Überschrift",
+          "description": "Überschrift für den Dialog zum Zurücksetzen aller Inhalte.",
+          "default": "Alle Inhalte zurücksetzen?"
+        },
+        {
+          "label": "Bestätigungsdialog zum Zurücksetzen: Text",
+          "description": "Text für den Dialog zum Zurücksetzen aller Inhalte.",
+          "default": "Alle deine Inhalte und ihr Status werden zurückgesetzt, aber deine Auswahl der Karten bleibt erhalten. Möchtest du fortfahren?"
+        },
+        {
+          "label": "Bestätigungsdialog zum kompletten Zurücksetzen: Überschrift",
+          "description": "Überschrift für den Dialog zum Zurücksetzen aller Inhalte und der Auswahl.",
+          "default": "Alle Inhalte und deine Auswahl zurücksetzen?"
+        },
+        {
+          "label": "Bestätigungsdialog zum kompletten Zurücksetzen: Text",
+          "description": "Text für den Dialog zum Zurücksetzen aller Inhalte und der Auswahl.",
+          "default": "Alle deine Inhalte, ihr Status und deine Auswahl werden zurückgesetzt. Möchtest du fortfahren?"
+        },
+        {
+          "label": "Ja",
+          "default": "Ja"
+        },
+        {
+          "label": "Nein",
+          "default": "Nein"
+        },
+        {
+          "label": "Keine Inhalte",
+          "default": "Es wurden keine gültigen Inhalte definiert."
+        }
+        {
+          "label": "Weiter",
+          "default": "Weiter"
+        }
+      ]
+    },
+    {
+      "label": "Texte für Barrierefreiheit",
+      "fields": [
+        {
+          "label": "Beschreibung der Aufgabe",
+          "description": "@label ist ein Platzhalter der durch den jeweiligen Wert ersetzt wird.",
+          "default": "Aufgabe: @label"
+        },
+        {
+          "label": "Beschreibung der Werkzeugleiste",
+          "default": "Werkzeugleiste. Benutze die Tastenkombination Alt und T um die Werkzeugleiste später zu fokussieren."
+        },
+        {
+          "label": "Button: Zurücksetzen",
+          "default": "Setze Aufgaben zurück"
+        },
+        {
+          "label": "Beschreibung für die Aufgabenliste",
+          "default": "Bearbeite die ausgewählten Aufgaben"
+        },
+        {
+          "label": "Schließen",
+          "default": "Schließen"
+        },
+      ]
+    }
+  ]
+}

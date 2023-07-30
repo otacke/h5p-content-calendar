@@ -209,7 +209,7 @@
         "name": "hasCardPadding",
         "type": "boolean",
         "label": "Add padding to cards",
-        "description": "If checked, will some extra padding to the card."
+        "description": "If checked, will some extra padding between the cards' border and the cards' content."
       },
       {
         "name": "cardWidth",
