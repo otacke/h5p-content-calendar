@@ -185,7 +185,7 @@
         {
           "label": "Keine Inhalte",
           "default": "Es wurden keine gültigen Inhalte definiert."
-        }
+        },
         {
           "label": "Weiter",
           "default": "Weiter"
@@ -215,7 +215,7 @@
         {
           "label": "Schließen",
           "default": "Schließen"
-        },
+        }
       ]
     }
   ]
