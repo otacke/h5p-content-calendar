@@ -99,14 +99,39 @@ $content-gap: 0.5rem;
   &:not(.has-padding) {
     padding: 0;
 
-    .h5p-content-calendar-card-introduction {
-      padding: 0 $card-padding;
+    .h5p-content-calendar-card-content {
+      .h5p-content-calendar-card-introduction {
+        padding: 0 $card-padding;
+      }
+    }
+  }
+
+  &.locked {
+    background-color: #eeeeee;
+    filter: brightness(90%);
+
+    .h5p-content-calendar-card-content {
+      .h5p-content-calendar-card-status {
+        color: #333;
+      }
     }
   }
 
   &:not(.no-content-state) {
     .h5p-content-calendar-card-content {
       gap: $content-gap;
+    }
+  }
+
+  &:not(.locked) {
+    cursor: pointer;
+
+    .h5p-content-calendar-card-content {
+      cursor: pointer;
+    }
+
+    &:hover {
+      border-color: $color-primary;
     }
   }
 
@@ -127,27 +152,6 @@ $content-gap: 0.5rem;
           border-bottom-right-radius: $content-border-radius;
         }
       }
-    }
-  }
-
-  &:not(.locked) {
-    cursor: pointer;
-
-    .h5p-content-calendar-card-content {
-      cursor: pointer;
-    }
-
-    &:hover {
-      border-color: $color-primary;
-    }
-  }
-
-  &.locked {
-    background-color: #eeeeee;
-    filter: brightness(90%);
-
-    .h5p-content-calendar-card-status {
-      color: #333;
     }
   }
 
