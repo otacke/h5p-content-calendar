@@ -51,7 +51,7 @@ export default class ContentCalendar extends H5P.EventDispatcher {
       a11y: {
         exerciseLabel: 'Exercise: @label',
         toolbar: 'Toolbar. Use the key combination Alt plus T to focus the toolbar later on.',
-        cardListView: 'Do selected exercises',
+        cardListView: 'Select what exercise you want to do',
         buttonReset: 'Reset exercises',
         close: 'Close'
       }

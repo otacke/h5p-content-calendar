@@ -210,7 +210,7 @@
         },
         {
           "label": "Beschreibung für die Aufgabenliste",
-          "default": "Bearbeite die ausgewählten Aufgaben"
+          "default": "Wähle, welche Aufgaben du bearbeiten möchtest"
         },
         {
           "label": "Schließen",

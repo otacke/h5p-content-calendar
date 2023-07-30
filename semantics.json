@@ -414,7 +414,7 @@
         "name": "cardListView",
         "type": "text",
         "label": "Description for content list",
-        "default": "Do selected exercises"
+        "default": "Select what exercise you want to do"
       },
       {
         "name": "close",
