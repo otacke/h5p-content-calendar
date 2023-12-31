@@ -126,7 +126,7 @@
               "name": "endtime",
               "type": "text",
               "label": "End date",
-              "description": "Optionally, set date and time when the content becomes unavailable",
+              "description": "Optionally, set date and time when the content becomes unavailable.",
               "optional": true,
               "widget": "datetime"
             }
