@@ -1,5 +1,5 @@
-import Util from '@services/util';
-import FocusTrap from '@services/focus-trap';
+import Util from '@services/util.js';
+import FocusTrap from '@services/focus-trap.js';
 import './exercise-overlay.scss';
 
 /** Class representing an exercise overlay */

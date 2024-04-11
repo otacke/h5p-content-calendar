@@ -1,4 +1,4 @@
-import MessageBox from './message-box';
+import MessageBox from './message-box.js';
 import './message-box-hint.scss';
 
 export default class MessageBoxHint extends MessageBox {

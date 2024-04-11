@@ -1,7 +1,7 @@
-import Util from '@services/util';
-import Dictionary from '@services/dictionary';
-import Globals from '@services/globals';
-import Content from '@components/content';
+import Util from '@services/util.js';
+import Dictionary from '@services/dictionary.js';
+import Globals from '@services/globals.js';
+import Content from '@components/content.js';
 import '@styles/h5p-content-calendar.scss';
 
 export default class ContentCalendar extends H5P.EventDispatcher {

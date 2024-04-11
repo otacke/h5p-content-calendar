@@ -1,4 +1,4 @@
-import Restriction from './restriction';
+import Restriction from './restriction.js';
 
 /**
  * Set of restrictions.

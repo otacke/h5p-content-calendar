@@ -1,6 +1,6 @@
-import Util from '@services/util';
-import Card from '@components/cards-list/card';
-import CardPlaceholder from './card-placeholder';
+import Util from '@services/util.js';
+import Card from '@components/cards-list/card.js';
+import CardPlaceholder from './card-placeholder.js';
 import './cards-list.scss';
 
 export default class CardsList {

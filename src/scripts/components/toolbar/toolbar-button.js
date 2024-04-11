@@ -1,4 +1,4 @@
-import Util from '@services/util';
+import Util from '@services/util.js';
 import './toolbar-button.scss';
 
 export default class ToolbarButton {

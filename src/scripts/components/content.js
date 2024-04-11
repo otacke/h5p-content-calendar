@@ -1,14 +1,14 @@
-import Contents from '@models/contents';
-import Screenreader from '@services/screenreader';
-import Util from '@services/util';
-import MediaScreen from './media-screen/media-screen';
-import CardsList from '@components/cards-list/cards-list';
-import ConfirmationDialog from '@components/confirmation-dialog/confirmation-dialog';
-import ExerciseOverlay from '@components/exercise-overlay/exercise-overlay';
-import Toolbar from '@components/toolbar/toolbar';
+import Contents from '@models/contents.js';
+import Screenreader from '@services/screenreader.js';
+import Util from '@services/util.js';
+import MediaScreen from './media-screen/media-screen.js';
+import CardsList from '@components/cards-list/cards-list.js';
+import ConfirmationDialog from '@components/confirmation-dialog/confirmation-dialog.js';
+import ExerciseOverlay from '@components/exercise-overlay/exercise-overlay.js';
+import Toolbar from '@components/toolbar/toolbar.js';
 import './content.scss';
-import MessageBox from './message-box/message-box';
-import MessageBoxHint from './message-box/message-box-hint';
+import MessageBox from './message-box/message-box.js';
+import MessageBoxHint from './message-box/message-box-hint.js';
 
 export default class Content {
 
