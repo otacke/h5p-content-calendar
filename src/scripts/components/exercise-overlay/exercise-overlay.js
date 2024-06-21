@@ -130,7 +130,7 @@ export default class ExerciseOverlay {
    */
   getSize() {
     const rect = this.dom.getBoundingClientRect();
-    return { width: rect.width, height: rect.height};
+    return { width: rect.width, height: rect.height };
   }
 
   /**

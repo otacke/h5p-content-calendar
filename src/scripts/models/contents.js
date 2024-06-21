@@ -117,9 +117,9 @@ export default class Contents {
 
     // TODO: Could be a class
     const content = {
-      ...(label && {label: label}),
+      ...(label && { label: label }),
       ariaLabel: ariaLabel,
-      ...(params.image && {image: params.image}),
+      ...(params.image && { image: params.image }),
       introduction: introduction,
       contentInstance: contentInstance,
       visuals: params.visuals,
