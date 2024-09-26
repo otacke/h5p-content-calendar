@@ -1,0 +1,221 @@
+{
+  "semantics": [
+    {
+      "label": "Show title screen",
+      "description": "If checked, a title screen will show up when starting."
+    },
+    {
+      "label": "Title screen",
+      "fields": [
+        {
+          "label": "Introduction",
+          "placeholder": "Welcome to ..."
+        },
+        {
+          "label": "Title screen medium"
+        }
+      ]
+    },
+    {
+      "label": "Headline",
+      "description": "Optional headline to show above cards."
+    },
+    {
+      "label": "Contents",
+      "entity": "content",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "field": {
+        "label": "Content",
+        "fields": [
+          {
+            "label": "Label",
+            "description": "Label for the content. The label will be set to the metadata title if no label, image or teaser is set."
+          },
+          {
+            "label": "Image",
+            "description": "Optional illustrative image."
+          },
+          {
+            "label": "Teaser",
+            "description": "Optional teaser for the content."
+          },
+          {
+            "label": "Access restrictions",
+            "description": "Define how access to the content should be limited.",
+            "fields": [
+              {
+                "label": "Start date",
+                "description": "Optionally, set date and time when the content becomes available."
+              },
+              {
+                "label": "End date",
+                "description": "Optionally, set date and time when the content becomes unavailable."
+              }
+            ]
+          },
+          {
+            "label": "Content",
+            "description": "Choose the type of content you would like to add."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
+        {
+          "label": "Display content state",
+          "description": "If checked, will display the contents state at the bottom of a card."
+        },
+        {
+          "label": "Enable \"Retry\" button",
+          "description": "If checked, allows users to reset all exercises of all cards at once."
+        }
+      ]
+    },
+    {
+      "label": "Visual settings",
+      "fields": [
+        {
+          "label": "Background image",
+          "description": "Select an image to use as the background of the content."
+        },
+        {
+          "label": "Add padding to cards",
+          "description": "If checked, will some extra padding between the cards' border and the cards' content."
+        },
+        {
+          "label": "Card width",
+          "description": "Set the default card width as a CSS value (e.g. 100px or 14rem or 15em). If you leave out the unit, px will be assumed.",
+          "default": "14rem"
+        },
+        {
+          "label": "Image sizing",
+          "description": "Choose how content images should be sized.",
+          "options": [
+            {
+              "label": "Use image size ratio"
+            },
+            {
+              "label": "Use custom ratio"
+            }
+          ]
+        },
+        {
+          "label": "Custom ratio width",
+          "description": "Set the horizontal ratio component for content images."
+        },
+        {
+          "label": "Custom ratio height",
+          "description": "Set the vertical ratio component for content images."
+        },
+        {
+          "label": "Maximum teaser lines",
+          "description": "Set the maximum number of lines to display for the content teaser."
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "default": "Start",
+          "label": "Start",
+          "description": "Label of start button."
+        },
+        {
+          "label": "Status: unstarted",
+          "description": "Status label for unstarted content.",
+          "default": "unstarted"
+        },
+        {
+          "label": "Status: viewed",
+          "description": "Status label for viewed content.",
+          "default": "viewed"
+        },
+        {
+          "label": "Status: completed",
+          "description": "Status label for completed content.",
+          "default": "completed"
+        },
+        {
+          "label": "Status: cleared",
+          "description": "Status label for cleared content.",
+          "default": "cleared"
+        },
+        {
+          "label": "Untitled Content",
+          "description": "Fallback label.",
+          "default": "Untitled Content"
+        },
+        {
+          "label": "Reset confirmation dialog: header",
+          "description": "Header for dialog to confirm resetting all contents.",
+          "default": "Reset all contents?"
+        },
+        {
+          "label": "Reset confirmation dialog: text",
+          "description": "Text for dialog to confirm resetting all contents.",
+          "default": "All your contents and their status will be reset, but your selection will remain as is. Do you want to proceed?"
+        },
+        {
+          "label": "Reset confirmation dialog: header",
+          "description": "Header for dialog to confirm resetting all contents and selections.",
+          "default": "Reset all contents and selections?"
+        },
+        {
+          "label": "Reset confirmation dialog: text",
+          "description": "Text for dialog to confirm resetting all contents and selections.",
+          "default": "All your contents and their status and your selections will be reset. Do you want to proceed?"
+        },
+        {
+          "label": "Yes",
+          "default": "Yes"
+        },
+        {
+          "label": "No",
+          "default": "No"
+        },
+        {
+          "label": "No contents",
+          "default": "No valid contents were set."
+        },
+        {
+          "label": "Continue",
+          "default": "Continue"
+        }
+      ],
+      "label": "User interface"
+    },
+    {
+      "label": "Accessibility texts",
+      "fields": [
+        {
+          "label": "Exercise description",
+          "description": "@label is a placeholder that will be replaced with the respective value.",
+          "default": "Exercise: @label"
+        },
+        {
+          "label": "Toolbar description",
+          "default": "Toolbar. Use the key combination Alt plus T to focus the toolbar later on."
+        },
+        {
+          "label": "Button: Reset",
+          "default": "Reset exercises"
+        },
+        {
+          "label": "Description for content list",
+          "default": "Select what exercise you want to do"
+        },
+        {
+          "label": "Close",
+          "default": "Close"
+        }
+      ]
+    }
+  ]
+}
