@@ -9,8 +9,7 @@
       "fields": [
         {
           "label": "Einleitung",
-          "placeholder": "Willkommen zu ...",
-          "default": "<p style=\"text-align: center;\"></p>"
+          "placeholder": "Willkommen zu ..."
         },
         {
           "label": "Medium für den Titelbildschirm"
