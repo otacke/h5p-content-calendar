@@ -1,79 +1,79 @@
 {
   "semantics": [
     {
-      "label": "Show title screen",
-      "description": "If checked, a title screen will show up when starting."
+      "label": "Mostrar pantalla del título",
+      "description": "Si se activa, una pantalla de título se mostrará al inicio."
     },
     {
-      "label": "Title screen",
+      "label": "Pantalla de título",
       "fields": [
         {
-          "label": "Introduction",
-          "placeholder": "Welcome to ..."
+          "label": "Introducción",
+          "placeholder": "Bienvenido a ..."
         },
         {
-          "label": "Title screen medium"
+          "label": "Pantalla de título mediana"
         }
       ]
     },
     {
-      "label": "Headline",
-      "description": "Optional headline to show above cards."
+      "label": "Titular",
+      "description": "Titular opcional a mostrar arriba de tarjetas."
     },
     {
-      "label": "Contents",
-      "entity": "content",
+      "label": "Contenido",
+      "entity": "contenido",
       "widgets": [
         {
-          "label": "Default"
+          "label": "Predeterminado"
         }
       ],
       "field": {
-        "label": "Content",
+        "label": "Contenido",
         "fields": [
           {
-            "label": "Label",
-            "description": "Label for the content. The label will be set to the metadata title if no label, image or teaser is set."
+            "label": "Etiqueta",
+            "description": "Etiqueta para el contenido. La etiqueta será configurada al título de los metadatos; si no hay etiqueta se configura imágen o muestra."
           },
           {
-            "label": "Image",
-            "description": "Optional illustrative image."
+            "label": "Imagen",
+            "description": "Imagen ilustrativa opcional."
           },
           {
             "label": "Teaser",
             "description": "Optional teaser for the content."
           },
           {
-            "label": "Access restrictions",
-            "description": "Define how access to the content should be limited.",
+            "label": "Restricciones de acceso",
+            "description": "Definir cómo debería estar limitado el acceso al contenido.",
             "fields": [
               {
-                "label": "Start date",
-                "description": "Optionally, set date and time when the content becomes available."
+                "label": "Fecha de inicio",
+                "description": "Opcionalmente, configurar fecha y hora de cuando se volverá disponible el contenido."
               },
               {
-                "label": "End date",
-                "description": "Optionally, set date and time when the content becomes unavailable."
+                "label": "Fecha de fin",
+                "description": "Opcionalmente, configurar fecha y hora de cuando dejará de estar disponible el contenido."
               }
             ]
           },
           {
-            "label": "Content",
-            "description": "Choose the type of content you would like to add."
+            "label": "Contenido",
+            "description": "Elegir el tipo de contenido que le gustaría añadir."
           }
         ]
       }
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "Configuraciones del comportamiento",
+      "description": "Estas opciones le permiten controlar coo se comportan los trabajos.",
       "fields": [
         {
-          "label": "Display content state",
-          "description": "If checked, will display the contents state at the bottom of a card."
+          "label": "Mostrar estado del contenido",
+          "description": "Si se activa, se mostrará el estado de los contenidos a fondo de una tarjeta.."
         },
         {
-          "label": "Enable \"Retry\" button",
+          "label": "Habilitar botón \"Reintentar\"",
           "description": "If checked, allows users to reset all exercises of all cards at once."
         }
       ]
