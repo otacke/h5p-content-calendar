@@ -40,8 +40,8 @@
             "description": "Imagen ilustrativa opcional."
           },
           {
-            "label": "Teaser",
-            "description": "Optional teaser for the content."
+            "label": "Demo",
+            "description": "Demo opcional para el contenido."
           },
           {
             "label": "Restricciones de acceso",
@@ -74,148 +74,148 @@
         },
         {
           "label": "Habilitar botón \"Reintentar\"",
-          "description": "If checked, allows users to reset all exercises of all cards at once."
+          "description": "Si está marcada, permite a los usuarios restablecer todos los ejercicios de todas las tarjetas a la vez."
         }
       ]
     },
     {
-      "label": "Visual settings",
+      "label": "Ajustes visuales",
       "fields": [
         {
-          "label": "Background image",
-          "description": "Select an image to use as the background of the content."
+          "label": "Imagen de Fondo",
+          "description": "Seleccione una imagen para usar como fondo del contenido."
         },
         {
-          "label": "Add padding to cards",
-          "description": "If checked, will some extra padding between the cards' border and the cards' content."
+          "label": "Añadir relleno a las tarjetas",
+          "description": "Si está marcada, se agregará un relleno adicional entre el borde de las tarjetas y su contenido."
         },
         {
-          "label": "Card width",
-          "description": "Set the default card width as a CSS value (e.g. 100px or 14rem or 15em). If you leave out the unit, px will be assumed.",
+          "label": "Anchura de la tarjeta",
+          "description": "Configurar la anchura predeterminada de tarjeta como un valor CSS (por ejemplo 100px o 14rem o 15em). Si deja vacía la unidad se asumirá px.",
           "default": "14rem"
         },
         {
-          "label": "Image sizing",
-          "description": "Choose how content images should be sized.",
+          "label": "Tamaño de la imagen",
+          "description": "Configuración de redimensionado de las imágenes de contenido.",
           "options": [
             {
-              "label": "Use image size ratio"
+              "label": "Usar proporción de tamaño de imagen"
             },
             {
-              "label": "Use custom ratio"
+              "label": "Usar proporción personalizada"
             }
           ]
         },
         {
-          "label": "Custom ratio width",
-          "description": "Set the horizontal ratio component for content images."
+          "label": "Ancho de proporción personalizada",
+          "description": "Establezca la proporción de relación horizontal para las imágenes de contenido."
         },
         {
-          "label": "Custom ratio height",
-          "description": "Set the vertical ratio component for content images."
+          "label": "Altura de proporción personalizada",
+          "description": "Configurar el componente de proporción vertical para imágenes del contenido."
         },
         {
-          "description": "Set the maximum number of lines to display for the content teaser.",
-          "label": "Maximum teaser lines"
+          "description": "Configurar el número máximo de líneas a mostrar para el demo del contenido.",
+          "label": "Máximo de líneas de la demo"
         }
       ]
     },
     {
-      "label": "User interface",
+      "label": "Interfaz de usuario",
       "fields": [
         {
-          "label": "Start",
-          "description": "Label of start button.",
-          "default": "Start"
+          "label": "Iniciar",
+          "description": "Etiqueta del botón Iniciar.",
+          "default": "Iniciar"
         },
         {
-          "label": "Status: unstarted",
-          "description": "Status label for unstarted content.",
-          "default": "unstarted"
+          "label": "Estado: no-iniciado",
+          "description": "Etiqueta del estado para contenido no iniciado.",
+          "default": "no iniciado"
         },
         {
-          "label": "Status: viewed",
-          "description": "Status label for viewed content.",
-          "default": "viewed"
+          "label": "Estado: visto",
+          "description": "Etiqueta del estado para contenido visto.",
+          "default": "visto"
         },
         {
-          "label": "Status: completed",
-          "description": "Status label for completed content.",
-          "default": "completed"
+          "label": "Estado: completado",
+          "description": "Etiqueta de estado para contenido completado.",
+          "default": "completado"
         },
         {
-          "label": "Status: cleared",
-          "description": "Status label for cleared content.",
-          "default": "cleared"
+          "label": "Estado: borrado",
+          "description": "Etiqueta de estado para contenido borrado.",
+          "default": "borrado"
         },
         {
-          "label": "Untitled Content",
-          "description": "Fallback label.",
-          "default": "Untitled Content"
+          "label": "Contenido Sin Título",
+          "description": "Etiqueta de reserva.",
+          "default": "Contenido Sin Título"
         },
         {
-          "label": "Reset confirmation dialog: header",
-          "description": "Header for dialog to confirm resetting all contents.",
-          "default": "Reset all contents?"
+          "label": "Diálogo de confirmación de reinicio: encabezado",
+          "description": "Encabezado del cuadro de diálogo para confirmar el restablecimiento de todo el contenido.",
+          "default": "¿Restablecer todo el contenido?"
         },
         {
-          "label": "Reset confirmation dialog: text",
-          "description": "Text for dialog to confirm resetting all contents.",
-          "default": "All your contents and their status will be reset, but your selection will remain as is. Do you want to proceed?"
+          "label": "Cuadro de diálogo de confirmación de restablecimiento: texto",
+          "description": "Texto para el diálogo que confirma el restablecimiento de todo el contenido.",
+          "default": "Se restablecerán todos sus contenidos y su estado, pero su selección permanecerá tal como está. ¿Quiere continuar?"
         },
         {
-          "label": "Reset confirmation dialog: header",
-          "description": "Header for dialog to confirm resetting all contents and selections.",
-          "default": "Reset all contents and selections?"
+          "label": "Cuadro de diálogo de confirmación de restablecimiento: encabezado",
+          "description": "Encabezado del cuadro de diálogo para confirmar el restablecimiento de todos los contenidos y selecciones.",
+          "default": "¿Restablecer todos los contenidos y selecciones?"
         },
         {
-          "label": "Reset confirmation dialog: text",
-          "description": "Text for dialog to confirm resetting all contents and selections.",
-          "default": "All your contents and their status and your selections will be reset. Do you want to proceed?"
+          "label": "Cuadro de diálogo de confirmación de restablecimiento: texto",
+          "description": "Texto para el diálogo que confirma el restablecimiento de todos los contenidos y selecciones.",
+          "default": "Se restablecerán todos sus contenidos, su estado y sus selecciones. ¿Quiere continuar?"
         },
         {
-          "label": "Yes",
-          "default": "Yes"
+          "label": "Sí",
+          "default": "Sí"
         },
         {
           "label": "No",
           "default": "No"
         },
         {
-          "label": "No contents",
-          "default": "No valid contents were set."
+          "label": "Sin contenidos",
+          "default": "No se configuraron contenidos válidos."
         },
         {
-          "label": "Continue",
-          "default": "Continue"
+          "label": "Continuar",
+          "default": "Continuar"
         }
       ]
     },
     {
       "fields": [
         {
-          "label": "Exercise description",
-          "description": "@label is a placeholder that will be replaced with the respective value.",
-          "default": "Exercise: @label"
+          "label": "Descripción del ejercicio",
+          "description": "@label es un marcador de posición que será reemplazado con el valor respectivo.",
+          "default": "Ejercicio: @label"
         },
         {
-          "default": "Toolbar. Use the key combination Alt plus T to focus the toolbar later on.",
-          "label": "Toolbar description"
+          "default": "Barra de herramientas. Use la combinación de teclas Alt y T para enfocar la barra de herramientas más adelante.",
+          "label": "Descripción de barra de herramientas"
         },
         {
-          "label": "Button: Reset",
-          "default": "Reset exercises"
+          "label": "Botón: Reiniciar",
+          "default": "Reiniciar ejercicios"
         },
         {
-          "label": "Description for content list",
-          "default": "Select what exercise you want to do"
+          "label": "Descripción de la lista de contenidos",
+          "default": "Selecciona el ejercicio que desea realizar"
         },
         {
-          "label": "Close",
-          "default": "Close"
+          "label": "Cerrar",
+          "default": "Cerrar"
         }
       ],
-      "label": "Accessibility texts"
+      "label": "Textos de Accesibilidad"
     }
   ]
 }
