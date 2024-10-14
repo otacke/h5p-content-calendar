@@ -1,4 +1,4 @@
-@import "@styles/main";
+@use "@styles/main";
 
 .h5p-content-calendar-exercise {
   align-items: center;
@@ -72,7 +72,7 @@
 
       .h5p-content-calendar-exercise-headline {
         align-items: center;
-        border-bottom: 1px solid $color-shadow-dark;
+        border-bottom: 1px solid main.$color-shadow-dark;
         box-sizing: border-box;
         display: flex;
         flex-direction: row;
