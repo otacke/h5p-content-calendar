@@ -1,221 +1,221 @@
 {
   "semantics": [
     {
-      "label": "Show title screen",
-      "description": "If checked, a title screen will show up when starting."
+      "label": "Mostrar a pantalla de título",
+      "description": "Se está marcado, aparecerá unha pantalla de título ao comezar."
     },
     {
-      "label": "Title screen",
+      "label": "Pantalla de título",
       "fields": [
         {
-          "label": "Introduction",
-          "placeholder": "Welcome to ..."
+          "label": "Introdución",
+          "placeholder": "Benvido a ..."
         },
         {
-          "label": "Title screen medium"
+          "label": "Medio de pantalla de título"
         }
       ]
     },
     {
-      "label": "Headline",
-      "description": "Optional headline to show above cards."
+      "label": "Cabeceira",
+      "description": "Cabeceira opcional para mostrar sobre as tarxetas."
     },
     {
-      "label": "Contents",
-      "entity": "content",
+      "label": "Contidos",
+      "entity": "contido",
       "widgets": [
         {
-          "label": "Default"
+          "label": "Por defecto"
         }
       ],
       "field": {
-        "label": "Content",
+        "label": "Contido",
         "fields": [
           {
-            "label": "Label",
-            "description": "Label for the content. The label will be set to the metadata title if no label, image or teaser is set."
+            "label": "Etiqueta",
+            "description": "Etiqueta para o contido. A etiqueta establecerase co título dos metadatos se non se establece ningunha etiqueta, imaxe ou tráiler."
           },
           {
-            "label": "Image",
-            "description": "Optional illustrative image."
+            "label": "Imaxe",
+            "description": "Imaxe ilustrativa opcional."
           },
           {
-            "label": "Teaser",
-            "description": "Optional teaser for the content."
+            "label": "Tráiler",
+            "description": "Tráiler opcional para o contido."
           },
           {
-            "label": "Access restrictions",
-            "description": "Define how access to the content should be limited.",
+            "label": "Restricións de acceso",
+            "description": "Define como debe limitarse o acceso ao contido.",
             "fields": [
               {
-                "label": "Start date",
-                "description": "Optionally, set date and time when the content becomes available."
+                "label": "Data de inicio",
+                "description": "Opcionalmente, establece a data e a hora en que o contido estará dispoñible."
               },
               {
-                "label": "End date",
-                "description": "Optionally, set date and time when the content becomes unavailable."
+                "label": "Data do fin",
+                "description": "Opcionalmente, establece a data e a hora en que o contido xa non estará dispoñible."
               }
             ]
           },
           {
-            "label": "Content",
-            "description": "Choose the type of content you would like to add."
+            "label": "Contido",
+            "description": "Escolle o tipo de contido que che gustaría engadir."
           }
         ]
       }
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "Configuración do comportamento",
+      "description": "Estas opcións premitiranche controlar o comportamento da tarefa.",
       "fields": [
         {
-          "label": "Display content state",
-          "description": "If checked, will display the contents state at the bottom of a card."
+          "label": "Mostrar o estado do contido",
+          "description": "Se está marcado, mostrará o estado do contido na parte inferior dunha tarxeta."
         },
         {
-          "label": "Enable \"Retry\" button",
-          "description": "If checked, allows users to reset all exercises of all cards at once."
+          "label": "Activar o botón \"Tentar de novo\"",
+          "description": "Se está marcado, permite aos usuarios restablecer todos os exercicios de todas as tarxetas á vez."
         }
       ]
     },
     {
       "fields": [
         {
-          "label": "Background image",
-          "description": "Select an image to use as the background of the content."
+          "label": "Imaxe de fondo",
+          "description": "Seleccione unha imaxe para usar como fondo do contido."
         },
         {
-          "label": "Add padding to cards",
-          "description": "If checked, will some extra padding between the cards' border and the cards' content."
+          "label": "Engade recheo ás tarxetas",
+          "description": "Se está marcado, haberá recheo extra entre o bordo das tarxetas e o seu contido."
         },
         {
-          "label": "Card width",
-          "description": "Set the default card width as a CSS value (e.g. 100px or 14rem or 15em). If you leave out the unit, px will be assumed.",
+          "label": "Ancho da tarxeta",
+          "description": "Establece o ancho da tarxeta predeterminado como un valor CSS (por exemplo, 100px ou 14rem ou 15em). Se non especificas a unidade, asumirase px.",
           "default": "14rem"
         },
         {
-          "label": "Image sizing",
-          "description": "Choose how content images should be sized.",
+          "label": "Tamaño da imaxe",
+          "description": "Escolle como deberán dimensionarse as imaxes de contido.",
           "options": [
             {
-              "label": "Use image size ratio"
+              "label": "Usar a relación de tamaño da imaxe"
             },
             {
-              "label": "Use custom ratio"
+              "label": "Usar unha proporción personalizada"
             }
           ]
         },
         {
-          "label": "Custom ratio width",
-          "description": "Set the horizontal ratio component for content images."
+          "label": "Ancho da proporción personalizada",
+          "description": "Establece o compoñente de proporción horizontal para as imaxes do contido."
         },
         {
-          "label": "Custom ratio height",
-          "description": "Set the vertical ratio component for content images."
+          "label": "Altura da proporción personalizada",
+          "description": "Establece o compoñente de proporción vertical para as imaxes do contido."
         },
         {
-          "label": "Maximum teaser lines",
-          "description": "Set the maximum number of lines to display for the content teaser."
+          "label": "Máximo de liñas do tráiler",
+          "description": "Establece o número máximo de liñas para mostrar para o tráiler do contido."
         }
       ],
-      "label": "Visual settings"
+      "label": "Configuración visual"
     },
     {
       "fields": [
         {
-          "label": "Start",
-          "description": "Label of start button.",
-          "default": "Start"
+          "label": "Empezar",
+          "description": "Etiqueta do botón de inicio.",
+          "default": "Empezar"
         },
         {
-          "label": "Status: unstarted",
-          "description": "Status label for unstarted content.",
-          "default": "unstarted"
+          "label": "Estado: sen iniciar",
+          "description": "Etiqueta de estado do contido non iniciado.",
+          "default": "non iniciado"
         },
         {
-          "label": "Status: viewed",
-          "description": "Status label for viewed content.",
-          "default": "viewed"
+          "label": "Estado: visto",
+          "description": "Etiqueta de estado do contido visto.",
+          "default": "visto"
         },
         {
-          "label": "Status: completed",
-          "description": "Status label for completed content.",
-          "default": "completed"
+          "label": "Estado: rematado",
+          "description": "Etiqueta de estado do contido completado.",
+          "default": "completado"
         },
         {
-          "description": "Status label for cleared content.",
-          "default": "cleared",
-          "label": "Status: cleared"
+          "description": "Etiqueta de estado para contido borrado.",
+          "default": "borrado",
+          "label": "Estado: borrado"
         },
         {
-          "label": "Untitled Content",
-          "description": "Fallback label.",
-          "default": "Untitled Content"
+          "label": "Contido sen título",
+          "description": "Etiqueta alternativa.",
+          "default": "Contido sen título"
         },
         {
-          "description": "Header for dialog to confirm resetting all contents.",
-          "default": "Reset all contents?",
-          "label": "Reset confirmation dialog: header"
+          "description": "Cabeceira do diálogo para confirmar o restablecemento de todos os contidos.",
+          "default": "Queres restablecer todos os contidos?",
+          "label": "Restablecer o diálogo de confirmación: cabeceira"
         },
         {
-          "label": "Reset confirmation dialog: text",
-          "description": "Text for dialog to confirm resetting all contents.",
-          "default": "All your contents and their status will be reset, but your selection will remain as is. Do you want to proceed?"
+          "label": "Diálogo de confirmación para restablecer: texto",
+          "description": "Texto para o diálogo para confirmar o restablecemento de todos os contidos.",
+          "default": "Restableceranse todos os teus contidos e o seu estado, pero a túa selección permanecerá como está. Queres continuar?"
         },
         {
-          "label": "Reset confirmation dialog: header",
-          "description": "Header for dialog to confirm resetting all contents and selections.",
-          "default": "Reset all contents and selections?"
+          "label": "Diálogo de confirmación de restablecemento: cabeceira",
+          "description": "Cabeceira do diálogo para confirmar o restablecemento de todos os contidos e seleccións.",
+          "default": "Queres restablecer todos os contidos e seleccións?"
         },
         {
-          "label": "Reset confirmation dialog: text",
-          "description": "Text for dialog to confirm resetting all contents and selections.",
-          "default": "All your contents and their status and your selections will be reset. Do you want to proceed?"
+          "label": "Diálogo de confirmación para restablecer: texto",
+          "description": "Texto para o diálogo para confirmar o restablecemento de todos os contidos e seleccións.",
+          "default": "Restableceranse todos os teus contidos, o seu estado e as túas seleccións. Queres continuar?"
         },
         {
-          "label": "Yes",
-          "default": "Yes"
+          "label": "Si",
+          "default": "Si"
         },
         {
-          "label": "No",
-          "default": "No"
+          "label": "Non",
+          "default": "Non"
         },
         {
-          "label": "No contents",
-          "default": "No valid contents were set."
+          "label": "Non hai contido",
+          "default": "Non se definiu ningún contido válido."
         },
         {
-          "label": "Continue",
-          "default": "Continue"
+          "label": "Continuar",
+          "default": "Continuar"
         }
       ],
-      "label": "User interface"
+      "label": "Interface de usuario"
     },
     {
       "fields": [
         {
-          "label": "Exercise description",
-          "description": "@label is a placeholder that will be replaced with the respective value.",
-          "default": "Exercise: @label"
+          "label": "Descrición do exercicio",
+          "description": "@label é un marcador de posición que se substituirá polo valor respectivo.",
+          "default": "Exercicio: @label"
         },
         {
-          "label": "Toolbar description",
-          "default": "Toolbar. Use the key combination Alt plus T to focus the toolbar later on."
+          "label": "Descrición da barra de ferramentas",
+          "default": "Barra de ferramentas. Usa a combinación de teclas Alt máis T para centrar a barra de ferramentas máis tarde."
         },
         {
-          "label": "Button: Reset",
-          "default": "Reset exercises"
+          "label": "Botón: Restablecer",
+          "default": "Reiniciar exercicios"
         },
         {
-          "label": "Description for content list",
-          "default": "Select what exercise you want to do"
+          "label": "Descrición da lista de contidos",
+          "default": "Selecciona o exercicio que queres facer"
         },
         {
-          "label": "Close",
-          "default": "Close"
+          "label": "Pechar",
+          "default": "Pechar"
         }
       ],
-      "label": "Accessibility texts"
+      "label": "Textos de accesibilidade"
     }
   ]
 }
