@@ -1,18 +1,18 @@
 @use "@styles/main";
 
-$card-width: var(--card-width, 14rem);
-$card-padding: 0.5rem;
 $content-border-radius: 0.5rem;
 $content-gap: 0.5rem;
 
 .h5p-content-calendar-card {
+  --card-padding: 0.5rem;
+
   background-color: #fff;
   border: 0.15rem solid main.$color-shadow-dark;
   border-radius: 0.5rem;
   box-sizing: border-box;
   display: flex;
   list-style-type: none;
-  width: $card-width;
+  width: var(--card-width, 14rem);
 
   .h5p-content-calendar-card-content {
     align-items: inherit;
@@ -53,7 +53,7 @@ $content-gap: 0.5rem;
       }
 
       &.fixed-ratio {
-        height: calc(($card-width - 2 * $card-padding) / var(--card-image-ratio-width, 16) * var(--card-image-ratio-height, 9));
+        height: calc((var(--card-width, 14rem) - 2 * var(--card-padding, 0.5rem)) / var(--card-image-ratio-width, 16) * var(--card-image-ratio-height, 9));
         object-fit: cover;
       }
     }
@@ -93,7 +93,7 @@ $content-gap: 0.5rem;
   }
 
   &.has-padding {
-    padding: $card-padding;
+    padding: var(--card-padding, 0.5rem);
   }
 
   &:not(.has-padding) {
@@ -101,7 +101,7 @@ $content-gap: 0.5rem;
 
     .h5p-content-calendar-card-content {
       .h5p-content-calendar-card-introduction {
-        padding: 0 $card-padding;
+        padding: 0 var(--card-padding, 0.5rem);
       }
     }
   }
