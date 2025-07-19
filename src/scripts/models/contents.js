@@ -57,7 +57,7 @@ export default class Contents {
     }
 
     params = Util.extend({
-      statusCode: this.params.globals.get('states')['unstarted'],
+      statusCode: this.params.globals.get('states').unstarted,
       keywords: ''
     }, params);
 
@@ -107,8 +107,8 @@ export default class Contents {
         id: id,
         targetValue: date,
         mode: (id === 'starttime') ?
-          Restriction.MODES['GREATEROREQUAL'] :
-          Restriction.MODES['LESSOREQUAL'],
+          Restriction.MODES.GREATEROREQUAL :
+          Restriction.MODES.LESSOREQUAL,
         getCurrentValue: () => {
           return new Date();
         }
@@ -203,7 +203,7 @@ export default class Contents {
   reset() {
     Object.values(this.contents).forEach((content) => {
       content.contentInstance.setState(
-        this.params.globals.get('states')['unstarted']
+        this.params.globals.get('states').unstarted
       );
       content.contentInstance.reset();
     });

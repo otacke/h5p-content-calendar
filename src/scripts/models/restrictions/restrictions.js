@@ -8,7 +8,7 @@ import Restriction from './restriction.js';
  */
 export default class Restrictions {
   constructor(params = {}) {
-    this.mode = Restrictions.MODES['ALL'];
+    this.mode = Restrictions.MODES.ALL;
     this.setMode(params.mode);
 
     this.restrictions = {};
@@ -89,12 +89,12 @@ export default class Restrictions {
     }
 
     const restrictions = Object.values(this.restrictions);
-    if (this.mode === Restrictions.MODES['ALL']) {
+    if (this.mode === Restrictions.MODES.ALL) {
       return restrictions.every((restriction) => {
         return restriction.isMet();
       });
     }
-    else if (this.mode === Restrictions.MODES['ANY']) {
+    else if (this.mode === Restrictions.MODES.ANY) {
       return restrictions.some((restriction) => restriction.isMet());
     }
 

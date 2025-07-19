@@ -19,7 +19,7 @@ export default class Card {
     }, callbacks);
 
     this.buildDOM();
-    this.setStatusCode(this.params.globals.get('states')['unstarted']);
+    this.setStatusCode(this.params.globals.get('states').unstarted);
     this.updateAriaLabel();
   }
 

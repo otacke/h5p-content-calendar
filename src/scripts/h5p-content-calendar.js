@@ -40,8 +40,10 @@ export default class ContentCalendar extends H5P.EventDispatcher {
         noCardsFilter: 'You need to select keywords in order to see contents to select from.',
         noCardsSelected: 'You have not selected any content.',
         confirmResetHeader: 'Reset all contents?',
+        // eslint-disable-next-line @stylistic/js/max-len
         confirmResetDialog: 'All your contents and their status will be reset, but your selection will remain as is. Do you want to proceed?',
         confirmResetAllHeader: 'Reset all contents and selections?',
+        // eslint-disable-next-line @stylistic/js/max-len
         confirmResetAllDialog: 'All your contents and their status and your selections will be reset. Do you want to proceed?',
         no: 'No',
         yes: 'Yes',

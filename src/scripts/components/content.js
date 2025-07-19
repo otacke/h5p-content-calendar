@@ -10,6 +10,9 @@ import './content.scss';
 import MessageBox from './message-box/message-box.js';
 import MessageBoxHint from './message-box/message-box-hint.js';
 
+/** @constant {number} LOCKING_INTERVAL_MS Update interval in milliseconds. */
+const LOCKING_INTERVAL_MS = 15000; // Update locking state every 15 seconds
+
 export default class Content {
 
   constructor(params = {}) {
@@ -191,7 +194,7 @@ export default class Content {
     if (hasTimeRestrictions) {
       window.setInterval(() => {
         this.updateContentLocking();
-      }, Content.LOCKING_INTERVAL_MS);
+      }, LOCKING_INTERVAL_MS);
     }
 
     this.updateContentLocking();
@@ -256,7 +259,7 @@ export default class Content {
     );
     this.exerciseOverlay.show();
 
-    content.contentInstance.setState(this.params.globals.get('states')['viewed']);
+    content.contentInstance.setState(this.params.globals.get('states').viewed);
 
     // Keep track to give back focus later
     this.currentCardId = params.id;
@@ -327,6 +330,3 @@ export default class Content {
     this.pool.reset();
   }
 }
-
-/** @constant {number} LOCKING_INTERVAL_MS Update interval in milliseconds. */
-Content.LOCKING_INTERVAL_MS = 15 * 1000; // Update locking state every 15 seconds

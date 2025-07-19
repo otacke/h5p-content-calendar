@@ -11,7 +11,7 @@ import Util from '@services/util.js';
  */
 export default class Restriction {
   constructor(params = {}, callbacks = {}) {
-    this.mode = Restriction.MODES['EQUAL'];
+    this.mode = Restriction.MODES.EQUAL;
 
     this.callbacks = Util.extend({
       getCurrentValue: () => {}
@@ -62,39 +62,39 @@ export default class Restriction {
     let result;
 
     switch (this.mode) {
-      case Restriction.MODES['NOTEQUAL']:
+      case Restriction.MODES.NOTEQUAL:
         result = this.callbacks.getCurrentValue() !== this.targetValue;
         break;
 
-      case Restriction.MODES['EQUAL']:
+      case Restriction.MODES.EQUAL:
         result = this.callbacks.getCurrentValue() === this.targetValue;
         break;
 
-      case Restriction.MODES['LESSOREQUAL']:
+      case Restriction.MODES.LESSOREQUAL:
         result = this.callbacks.getCurrentValue() <= this.targetValue;
         break;
 
-      case Restriction.MODES['GREATEROREQUAL']:
+      case Restriction.MODES.GREATEROREQUAL:
         result = this.callbacks.getCurrentValue() >= this.targetValue;
         break;
 
-      case Restriction.MODES['LESS']:
+      case Restriction.MODES.LESS:
         result = this.callbacks.getCurrentValue() < this.targetValue;
         break;
 
-      case Restriction.MODES['GREATER']:
+      case Restriction.MODES.GREATER:
         result = this.callbacks.getCurrentValue() > this.targetValue;
         break;
 
       // current value is superset of targetValue / contains targetValue
-      case Restriction.MODES['SUPSET']:
+      case Restriction.MODES.SUPSET:
         result = (typeof this.callbacks.getCurrentValue() === 'string') ?
           this.callbacks.getCurrentValue().includes(this.targetValue) :
           false;
         break;
 
       // current value is subset of targetValue / is contained by targetValue
-      case Restriction.MODES['SUBSET']:
+      case Restriction.MODES.SUBSET:
         result = (typeof this.targetValue === 'string') ?
           this.targetValue.includes(this.callbacks.getCurrentValue()) :
           false;

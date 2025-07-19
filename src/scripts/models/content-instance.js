@@ -219,10 +219,10 @@ export default class ContentInstance {
     }
 
     if (event.getScore() < this.instance.getMaxScore()) {
-      this.setState(this.params.globals.get('states')['completed']);
+      this.setState(this.params.globals.get('states').completed);
     }
     else {
-      this.setState(this.params.globals.get('states')['cleared']);
+      this.setState(this.params.globals.get('states').cleared);
     }
 
     if (this.extendsH5PQuestion) {
@@ -256,19 +256,19 @@ export default class ContentInstance {
     if (params.force) {
       newState = states[state];
     }
-    else if (state === states['unstarted']) {
-      newState = states['unstarted'];
+    else if (state === states.unstarted) {
+      newState = states.unstarted;
     }
-    else if (state === states['viewed']) {
+    else if (state === states.viewed) {
       newState = (this.isInstanceTask(this.instance)) ?
-        states['viewed'] :
-        states['cleared'];
+        states.viewed :
+        states.cleared;
     }
-    else if (state === states['completed']) {
-      newState = states['completed'];
+    else if (state === states.completed) {
+      newState = states.completed;
     }
-    else if (state === states['cleared']) {
-      newState = states['cleared'];
+    else if (state === states.cleared) {
+      newState = states.cleared;
     }
 
     if (!this.state || this.state !== newState) {
