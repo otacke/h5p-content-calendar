@@ -18,7 +18,7 @@ export default class Content {
   constructor(params = {}) {
     this.params = Util.extend({
       contents: [],
-      previousState: {}
+      previousState: {},
     }, params);
 
     this.buildDOM();
@@ -36,7 +36,7 @@ export default class Content {
     if (!this.params.contents.length) {
       this.messageBoxHint = new MessageBoxHint();
       this.messageBoxHint.setText(
-        this.params.dictionary.get('l10n.noContents')
+        this.params.dictionary.get('l10n.noContents'),
       );
       this.dom.append(this.messageBoxHint.getDOM());
 
@@ -50,8 +50,8 @@ export default class Content {
         dictionary: this.params.dictionary,
         contents: this.params.contents,
         ...(this.params.previousState.contents && {
-          previousState: this.params.previousState.contents
-        })
+          previousState: this.params.previousState.contents,
+        }),
       },
       {
         onStateChanged: (params) => {
@@ -62,8 +62,8 @@ export default class Content {
         },
         onContinued: () => {
           this.handleExerciseClosed();
-        }
-      }
+        },
+      },
     );
 
     // Title screen if set
@@ -77,15 +77,15 @@ export default class Content {
         introduction: this.params.titleScreen.titleScreenIntroduction,
         medium: this.params.titleScreen.titleScreenMedium,
         buttons: [
-          { id: 'start', text: this.params.dictionary.get('l10n.start') }
+          { id: 'start', text: this.params.dictionary.get('l10n.start') },
         ],
         a11y: {
-          screenOpened: this.params.dictionary.get('a11y.startScreenWasOpened')
-        }
+          screenOpened: this.params.dictionary.get('a11y.startScreenWasOpened'),
+        },
       }, {
         onButtonClicked: () => {
           this.handleTitleScreenClosed();
-        }
+        },
       });
 
       this.intro.append(this.startScreen.getDOM());
@@ -107,7 +107,7 @@ export default class Content {
         },
         onClick: () => {
           this.handleResetConfirmation();
-        }
+        },
       });
     }
 
@@ -115,7 +115,7 @@ export default class Content {
     this.toolbar = new Toolbar({
       dictionary: this.params.dictionary,
       ...(this.params.headline && { headline: this.params.headline }),
-      buttons: buttons
+      buttons: buttons,
     });
     this.main.append(this.toolbar.getDOM());
 
@@ -131,7 +131,7 @@ export default class Content {
         contents: this.pool.getContents(),
         ...(this.params.backgroundImage &&
           { backgroundImage: this.params.backgroundImage }
-        )
+        ),
       },
       {
         onCardClicked: (params) => {
@@ -139,8 +139,8 @@ export default class Content {
         },
         onGotoToolbar: () => {
           this.toolbar.focus();
-        }
-      }
+        },
+      },
     );
     this.main.append(this.poolList.getDOM());
 
@@ -154,19 +154,19 @@ export default class Content {
 
     this.exerciseOverlay = new ExerciseOverlay(
       {
-        dictionary: this.params.dictionary
+        dictionary: this.params.dictionary,
       },
       {
         onClosed: () => {
           this.handleExerciseClosed();
-        }
-      }
+        },
+      },
     );
     this.dom.append(this.exerciseOverlay.getDOM());
 
     // Confirmation Dialog
     this.confirmationDialog = new ConfirmationDialog({
-      globals: this.params.globals
+      globals: this.params.globals,
     });
     document.body.append(this.confirmationDialog.getDOM());
 
@@ -218,7 +218,7 @@ export default class Content {
     }
 
     return {
-      contents: this.pool.getCurrentState()
+      contents: this.pool.getCurrentState(),
     };
   }
 
@@ -230,7 +230,7 @@ export default class Content {
 
     for (const id in contents) {
       this.pool.updateState(
-        id, { 'isLocked': !contents[id].areRequirementsMet() }
+        id, { 'isLocked': !contents[id].areRequirementsMet() },
       );
     }
   }
@@ -255,7 +255,7 @@ export default class Content {
     this.exerciseOverlay.setH5PContent(content.contentInstance.getDOM());
     this.exerciseOverlay.setTitle(
       content?.label || content?.contentInstance?.params?.metadata?.title ||
-      ''
+      '',
     );
     this.exerciseOverlay.show();
 
@@ -312,12 +312,12 @@ export default class Content {
         headerText: this.params.dictionary.get('l10n.confirmResetHeader'),
         dialogText: this.params.dictionary.get('l10n.confirmResetDialog'),
         cancelText: this.params.dictionary.get('l10n.no'),
-        confirmText: this.params.dictionary.get('l10n.yes')
+        confirmText: this.params.dictionary.get('l10n.yes'),
       }, {
         onConfirmed: () => {
           this.handleReset();
-        }
-      }
+        },
+      },
     );
 
     this.confirmationDialog.show();

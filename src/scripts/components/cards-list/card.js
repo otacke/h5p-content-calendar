@@ -33,7 +33,7 @@ export default class Card {
     this.dom.classList.toggle('no-image', !this.params.image?.path);
     this.dom.classList.toggle('no-introduction', !this.params.introduction);
     this.dom.classList.toggle(
-      'no-content-state', !this.params.displayContentState
+      'no-content-state', !this.params.displayContentState,
     );
     this.dom.classList.toggle('has-padding', this.params.visuals.hasCardPadding);
 
@@ -66,7 +66,7 @@ export default class Card {
       }
 
       H5P.setSource(
-        image, this.params.image, this.params.globals.get('contentId')
+        image, this.params.image, this.params.globals.get('contentId'),
       );
 
       this.button.append(image);
@@ -85,7 +85,7 @@ export default class Card {
     this.status = document.createElement('div');
     this.status.classList.add('h5p-content-calendar-card-status');
     this.status.classList.toggle(
-      'display-none', !this.params.displayContentState
+      'display-none', !this.params.displayContentState,
     );
     this.button.append(this.status);
   }
@@ -134,7 +134,7 @@ export default class Card {
   updateAriaLabel() {
     const ariaLabelSegments = [
       `${this.params.dictionary.get('a11y.exerciseLabel').replace(/@label/g, this.params.ariaLabel)}`,
-      this.params.dictionary.get(`l10n.status${this.statusCode}`)
+      this.params.dictionary.get(`l10n.status${this.statusCode}`),
     ];
 
     this.button.setAttribute('aria-label', ariaLabelSegments.join('. '));
@@ -169,7 +169,7 @@ export default class Card {
       `${statusCode.charAt(0).toLocaleUpperCase()}${statusCode.slice(1)}`;
 
     this.status.innerHTML = this.params.dictionary.get(
-      `l10n.status${this.statusCode}`
+      `l10n.status${this.statusCode}`,
     );
   }
 }

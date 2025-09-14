@@ -8,13 +8,13 @@ export default class Contents {
   constructor(params = {}, callbacks = {}) {
     this.params = Util.extend({
       contents: [],
-      previousState: {}
+      previousState: {},
     }, params);
 
     this.callbacks = Util.extend({
       onStateChanged: () => {},
       onCardStateChanged: () => {},
-      onContinued: () => {}
+      onContinued: () => {},
     }, callbacks);
 
     if (Object.keys(this.params.previousState).length) {
@@ -58,7 +58,7 @@ export default class Contents {
 
     params = Util.extend({
       statusCode: this.params.globals.get('states').unstarted,
-      keywords: ''
+      keywords: '',
     }, params);
 
     const ariaLabel = params.label ?? (
@@ -77,19 +77,19 @@ export default class Contents {
         globals: this.params.globals,
         dictionary: this.params.dictionary,
         contentParams: params.contentType,
-        previousState: params.previousState
+        previousState: params.previousState,
       },
       {
         onStateChanged: (state) => {
           this.callbacks.onStateChanged({
             id: params.contentType.subContentId,
-            state: state
+            state: state,
           });
         },
         onContinued: () => {
           this.callbacks.onContinued();
-        }
-      }
+        },
+      },
     );
 
     const restrictions = new Restrictions();
@@ -111,7 +111,7 @@ export default class Contents {
           Restriction.MODES.LESSOREQUAL,
         getCurrentValue: () => {
           return new Date();
-        }
+        },
       });
     }
 
@@ -127,7 +127,7 @@ export default class Contents {
       statusCode: params.statusCode,
       areRequirementsMet: () => {
         return restrictions.areMet();
-      }
+      },
     };
 
     this.contents[params.contentType.subContentId] = content;
@@ -203,7 +203,7 @@ export default class Contents {
   reset() {
     Object.values(this.contents).forEach((content) => {
       content.contentInstance.setState(
-        this.params.globals.get('states').unstarted
+        this.params.globals.get('states').unstarted,
       );
       content.contentInstance.reset();
     });
@@ -220,7 +220,7 @@ export default class Contents {
 
       state[id] = {
         statusCode: content.statusCode,
-        instance: content.contentInstance?.instance?.getCurrentState?.() ?? {}
+        instance: content.contentInstance?.instance?.getCurrentState?.() ?? {},
       };
     }
 

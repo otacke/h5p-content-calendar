@@ -16,7 +16,7 @@ export default class ExerciseOverlay {
     this.params = Util.extend({}, params);
 
     this.callbacks = Util.extend({
-      onClosed: () => {}
+      onClosed: () => {},
     }, callbacks);
 
     this.handleGlobalClick = this.handleGlobalClick.bind(this);
@@ -40,7 +40,7 @@ export default class ExerciseOverlay {
     this.buttonClose = document.createElement('button');
     this.buttonClose.classList.add('h5p-content-calendar-exercise-button-close');
     this.buttonClose.setAttribute(
-      'aria-label', this.params.dictionary.get('a11y.close')
+      'aria-label', this.params.dictionary.get('a11y.close'),
     );
     this.buttonClose.addEventListener('click', () => {
       this.callbacks.onClosed();
@@ -54,14 +54,14 @@ export default class ExerciseOverlay {
 
     this.headlineText = document.createElement('div');
     this.headlineText.classList.add(
-      'h5p-content-calendar-exercise-headline-text'
+      'h5p-content-calendar-exercise-headline-text',
     );
     headline.append(this.headlineText);
 
     // H5P instance
     this.h5pInstance = document.createElement('div');
     this.h5pInstance.classList.add(
-      'h5p-content-calendar-exercise-instance-container'
+      'h5p-content-calendar-exercise-instance-container',
     );
     this.content.append(this.h5pInstance);
 
@@ -120,7 +120,7 @@ export default class ExerciseOverlay {
     this.headlineText.innerText = text;
     this.dom.setAttribute(
       'aria-label',
-      this.params.dictionary.get('a11y.exerciseLabel').replace(/@label/, text)
+      this.params.dictionary.get('a11y.exerciseLabel').replace(/@label/, text),
     );
   }
 

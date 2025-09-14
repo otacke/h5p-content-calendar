@@ -50,7 +50,7 @@ export default class FocusTrap {
         }
       }, {
         root: document.documentElement,
-        threshold: 0
+        threshold: 0,
       });
       this.observer.observe(this.params.trapElement);
     });
@@ -87,7 +87,7 @@ export default class FocusTrap {
       'select:not([disabled])',
       'video',
       'audio',
-      '[tabindex]:not([tabindex="-1"])'
+      '[tabindex]:not([tabindex="-1"])',
     ].join(', ');
 
     this.focusableElements = []
@@ -129,7 +129,7 @@ export default class FocusTrap {
     this.updateFocusableElements();
 
     this.params.trapElement.addEventListener(
-      'keydown', this.handleKeydownEvent, true
+      'keydown', this.handleKeydownEvent, true,
     );
 
     if (this.params.initialFocus && this.isChild(this.params.initialFocus)) {

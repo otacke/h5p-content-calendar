@@ -20,16 +20,16 @@ export default class MediaScreen {
     this.params = Util.extend({
       buttons: [],
       l10n: {
-        buttonText: 'Close'
+        buttonText: 'Close',
       },
       a11y: {
-        screenOpened: 'Screen was opened'
-      }
+        screenOpened: 'Screen was opened',
+      },
     }, params);
 
     this.callbacks = Util.extend({
       onButtonClicked: () => {},
-      onRead: () => {}
+      onRead: () => {},
     }, callbacks);
 
     this.buttons = [];
@@ -215,7 +215,7 @@ export default class MediaScreen {
           }
         }, {
           root: document.documentElement,
-          threshold: 0
+          threshold: 0,
         });
         this.observer.observe(this.dom);
       });
@@ -267,7 +267,7 @@ export default class MediaScreen {
       this.params.contentId,
       H5P.jQuery(this.visuals),
       false,
-      { metadata: this.medium.medatata }
+      { metadata: this.medium.medatata },
     );
 
     // Postparation

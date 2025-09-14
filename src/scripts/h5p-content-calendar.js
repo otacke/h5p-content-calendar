@@ -24,11 +24,11 @@ export default class ContentCalendar extends H5P.EventDispatcher {
         imageSizing: 'custom',
         customRatioWidth: 16,
         customRatioHeight: 9,
-        introClamp: 'unset'
+        introClamp: 'unset',
       },
       behaviour: {
         displayContentState: false,
-        enableRetry: false
+        enableRetry: false,
       },
       l10n: {
         start: 'Start',
@@ -48,15 +48,15 @@ export default class ContentCalendar extends H5P.EventDispatcher {
         no: 'No',
         yes: 'Yes',
         noContents: 'No valid contents were set.',
-        continue: 'Continue'
+        continue: 'Continue',
       },
       a11y: {
         exerciseLabel: 'Exercise: @label',
         toolbar: 'Toolbar. Use the key combination Alt plus T to focus the toolbar later on.',
         cardListView: 'Select what exercise you want to do',
         buttonReset: 'Reset exercises',
-        close: 'Close'
-      }
+        close: 'Close',
+      },
     }, params);
 
     this.contentId = contentId;
@@ -115,15 +115,15 @@ export default class ContentCalendar extends H5P.EventDispatcher {
     this.dom.style.setProperty('--card-width', this.params.visuals.cardWidth);
 
     this.dom.style.setProperty(
-      '--card-image-ratio-width', this.params.visuals.customRatioWidth
+      '--card-image-ratio-width', this.params.visuals.customRatioWidth,
     );
 
     this.dom.style.setProperty(
-      '--card-image-ratio-height', this.params.visuals.customRatioHeight
+      '--card-image-ratio-height', this.params.visuals.customRatioHeight,
     );
 
     this.dom.style.setProperty(
-      '--card-introduction-clamp', this.params.visuals.introClamp
+      '--card-introduction-clamp', this.params.visuals.introClamp,
     );
   }
 
@@ -152,13 +152,13 @@ export default class ContentCalendar extends H5P.EventDispatcher {
         ),
         ...(this.params.visuals.backgroundImage?.path &&
           { backgroundImage: this.params.visuals.backgroundImage }
-        )
+        ),
       },
       {
         resize: () => {
           this.trigger('resize');
-        }
-      }
+        },
+      },
     );
     this.dom.append(this.content.getDOM());
   }
@@ -170,7 +170,7 @@ export default class ContentCalendar extends H5P.EventDispatcher {
   getTitle() {
     // H5P Core function: createTitle
     return H5P.createTitle(
-      this.extras?.metadata?.title || ContentCalendar.DEFAULT_DESCRIPTION
+      this.extras?.metadata?.title || ContentCalendar.DEFAULT_DESCRIPTION,
     );
   }
 
@@ -188,7 +188,7 @@ export default class ContentCalendar extends H5P.EventDispatcher {
    */
   getCurrentState() {
     return {
-      content: this.content.getCurrentState()
+      content: this.content.getCurrentState(),
     };
   }
 }
@@ -204,5 +204,5 @@ ContentCalendar.STATES = {
   unstarted: 0,
   viewed: 1,
   completed: 2,
-  cleared: 3
+  cleared: 3,
 };

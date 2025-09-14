@@ -15,19 +15,19 @@ export default class CardsList {
    */
   constructor(params = {}, callbacks = {}) {
     this.params = Util.extend({
-      contents: {}
+      contents: {},
     }, params);
 
     this.callbacks = Util.extend({
       onCardClicked: () => {},
-      onGotoToolbar: () => {}
+      onGotoToolbar: () => {},
     }, callbacks);
 
     this.dom = document.createElement('ul');
     this.dom.classList.add('h5p-content-calendar-cards-list');
     this.dom.setAttribute('role', 'list'); // Explicit list role required for some screen readers
     this.dom.setAttribute(
-      'aria-label', this.params.dictionary.get('a11y.cardListView')
+      'aria-label', this.params.dictionary.get('a11y.cardListView'),
     );
     this.dom.addEventListener('keydown', (event) => {
       this.handleKeydown(event);
@@ -49,7 +49,7 @@ export default class CardsList {
       H5P.setSource(
         image,
         this.params.backgroundImage,
-        this.params.globals.get('contentId')
+        this.params.globals.get('contentId'),
       );
 
       if (image.src) {
@@ -73,9 +73,9 @@ export default class CardsList {
             image: contentParams.image,
             introduction: contentParams.introduction,
             visuals: contentParams.visuals,
-            displayContentState: this.params.behaviour.displayContentState
-          }
-        }
+            displayContentState: this.params.behaviour.displayContentState,
+          },
+        },
       );
     }
   }
@@ -105,9 +105,9 @@ export default class CardsList {
       {
         ...params.card,
         dictionary: this.params.dictionary,
-        globals: this.params.globals
+        globals: this.params.globals,
       },
-      callbacks
+      callbacks,
     );
     this.dom.append(this.cards[params.id].getDOM());
   }

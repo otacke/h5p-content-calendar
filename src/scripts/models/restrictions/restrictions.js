@@ -49,13 +49,13 @@ export default class Restrictions {
     this.restrictions[params.id] = new Restriction(
       {
         targetValue: params.targetValue,
-        mode: params.mode
+        mode: params.mode,
       },
       {
         getCurrentValue: () => {
           return params.getCurrentValue();
-        }
-      }
+        },
+      },
     );
   }
 
@@ -105,5 +105,5 @@ export default class Restrictions {
 /** @constant {object} MODES Possible modes for combining restrictions */
 Restrictions.MODES = {
   ANY: 0, // At least on restriction must be met
-  ALL: 1 // All restrictions must be met
+  ALL: 1, // All restrictions must be met
 };

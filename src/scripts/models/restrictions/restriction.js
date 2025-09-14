@@ -14,7 +14,7 @@ export default class Restriction {
     this.mode = Restriction.MODES.EQUAL;
 
     this.callbacks = Util.extend({
-      getCurrentValue: () => {}
+      getCurrentValue: () => {},
     }, callbacks);
 
     this.setTargetValue(params.targetValue);
@@ -118,5 +118,5 @@ Restriction.MODES = {
   LESS: 4, // current value is less than target value
   GREATER: 5, // current value is greater than target value
   SUPSET: 6, // current value contains target value/is superset of target value
-  SUBSET: 7 // current value is included in target value/is subset of target value
+  SUBSET: 7, // current value is included in target value/is subset of target value
 };

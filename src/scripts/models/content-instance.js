@@ -7,7 +7,7 @@ export default class ContentInstance {
 
     this.callbacks = Util.extend({
       onStateChanged: () => {},
-      onContinued: () => {}
+      onContinued: () => {},
     }, callbacks);
 
     this.instance = undefined;
@@ -66,7 +66,7 @@ export default class ContentInstance {
       this.params.globals.get('contentId'),
       undefined,
       true,
-      { previousState: this.params.previousState }
+      { previousState: this.params.previousState },
     );
 
     if (!this.instance) {
@@ -75,12 +75,12 @@ export default class ContentInstance {
 
     // Resize parent when children resize
     this.bubbleUp(
-      this.instance, 'resize', this.params.globals.get('mainInstance')
+      this.instance, 'resize', this.params.globals.get('mainInstance'),
     );
 
     // Resize children to fit inside parent
     this.bubbleDown(
-      this.params.globals.get('mainInstance'), 'resize', [this.instance]
+      this.params.globals.get('mainInstance'), 'resize', [this.instance],
     );
 
     if (this.isInstanceTask(this.instance)) {
@@ -164,7 +164,7 @@ export default class ContentInstance {
         () => {
           this.callbacks.onContinued();
         },
-        false
+        false,
       );
     }
     else {
@@ -172,7 +172,7 @@ export default class ContentInstance {
       this.continueButton.classList.add(
         'h5p-joubelui-button',
         'h5p-content-calendar-exercise-instance-continue-button',
-        'display-none'
+        'display-none',
       );
       this.continueButton.innerText =
         this.params.dictionary.get('l10n.continue');
@@ -305,7 +305,7 @@ export default class ContentInstance {
         }
       }, {
         root: document.documentElement,
-        threshold: 0
+        threshold: 0,
       });
       this.observer.observe(this.instanceDOM);
     });
