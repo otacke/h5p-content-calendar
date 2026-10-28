@@ -1,4 +1,4 @@
-import he from 'he';
+import { decode } from 'he';
 
 /** Class for utility functions */
 export default class Util {
@@ -119,7 +119,7 @@ export default class Util {
       return '';
     }
 
-    let text = he.decode(html);
+    let text = decode(html);
     const div = document.createElement('div');
     div.innerHTML = text;
     text = div.textContent || div.innerText || '';
